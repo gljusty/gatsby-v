@@ -1,12 +1,21 @@
-import * as react from "react";
+import * as React from "react";
 import styled from "styled-components";
 
-const mycomponent = () => {
-    const button = styled.button`
+const StyledButton = styled.button`
     height: 20px;
     width: 80px;
     background-color: black;
+    text-align: center;
+    color: whitesmoke;
+    line-height: 12px;
+    font-size: 12px;
+    place-content: center;
     `
+
+const MyComponent = () => {
+    return (
+        <StyledButton title="test title">test</StyledButton>
+    )
 }
 
-export default mycomponent
+export default MyComponent

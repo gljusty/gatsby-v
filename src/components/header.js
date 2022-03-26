@@ -1,34 +1,33 @@
 import * as React from "react"
+import styled from "styled-components"
+import 'animate.css';
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import Stars from "./stars"
+
+const StyledHeader = styled.header`
+height: 2rem;
+background: linear-gradient(270deg, rgba(1,1,1,1), rgba(0,0,0,0.25));
+margin-bottom: 1.45rem;
+transition: translateY() linear 2000ms;
+transform: translateY(100px);
+`
+const StyledH1 = styled.h1`
+display: flex;
+float: right;
+margin-top: 0;
+`
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+  <StyledHeader>
+    <Stars></Stars>
+    <StyledH1>
+      <Link to="/" style={{color: "whitesmoke",textDecoration: "none"}} className="animate__animated animate__fadeInDown">
           {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+      </Link>
+    </StyledH1>
+  </StyledHeader>
 )
 
 Header.propTypes = {

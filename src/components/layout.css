@@ -4,12 +4,18 @@ html {
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 body {
   margin: 0;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  background: linear-gradient(180deg,rgb(1,1,1) 80%,#1b3553);
+  color: whitesmoke;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
