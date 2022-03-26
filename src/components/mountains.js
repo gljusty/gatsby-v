@@ -68,13 +68,87 @@ z-index: 2;
 `
 
 const HouseOne = styled.div`
-clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 69% 24%, 76% 26%, 77% 43%, 75% 100%);
+clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 70% 26%, 76% 26%, 78% 44%, 75% 100%);
+background-color: slategrey;
+height: 22px;
+width: 22px;
+position: absolute;
+bottom: 0;
+left: 65%;
+z-index: 1;
+  &:after {
+      position: relative;
+      background-color: rgba(225,225,225,0.5);
+      top: 0px;
+  }
+`
+const HouseTwo = styled.div`
+clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 70% 26%, 76% 26%, 78% 44%, 75% 100%);
+background-color: skyblue;
+height: 22px;
+width: 22px;
+position: absolute;
+bottom: 0;
+left: 68%;
+z-index: 1;
+`
+
+const HouseThree = styled.div`
+clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 70% 26%, 76% 26%, 78% 44%, 75% 100%);
 background-color: black;
-height: 20px;
+height: 18px;
+width: 18px;
+position: absolute;
+bottom: 0;
+left: 67.5%;
+z-index: -1;
+`
+
+const BuildingOne = styled.div`
+clip-path: polygon(47% 0, 45% 98%, 62% 98%, 62% 47%, 73% 47%, 73% 77%, 51% 78%, 45% 100%, 100% 100%, 100% 0%);
+background-color: black;
+height: 30px;
 width: 20px;
 position: absolute;
-bottom: 0
+bottom: 0;
 left: 66%;
+z-index: 2;
+  &:hover {
+      transition: transform 250ms ease-in-out;
+      transform: skewX(5deg);
+  }
+`
+
+const BuildingTwo = styled.div`
+clip-path: polygon(47% 0, 45% 98%, 62% 98%, 62% 47%, 73% 47%, 73% 77%, 51% 78%, 45% 100%, 100% 100%, 100% 0%);
+background-color: rgba(10,10,10,1);
+height: 30px;
+width: 20px;
+position: absolute;
+bottom: 0;
+left: 63.5%;
+z-index: 2;
+`
+const BuildingThree = styled.div`
+clip-path: polygon(47% 0, 45% 98%, 62% 98%, 62% 47%, 73% 47%, 73% 77%, 51% 78%, 45% 100%, 100% 100%, 100% 0%);
+background-color: gold;
+height: 20px;
+width: 15px;
+position: absolute;
+bottom: 0;
+left: 64%;
+z-index: 3;
+  ^:after {
+    clip-path: polygon(11% 0, 17% 100%, 46% 100%, 36% 13%, 63% 16%, 66% 46%, 39% 43%, 38% 100%, 89% 100%, 81% 0);
+    background-color: black;
+    height: 20px;
+    width: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 64.25%;
+    z-index: 3;
+
+  }
 `
 
 const Mountains = () => {
@@ -86,7 +160,12 @@ const Mountains = () => {
             <MountainFour id="mountain_four"></MountainFour>
             <MountainFive id="mountain_five"></MountainFive>
             <MountainSix id="mountain_six"></MountainSix>
-            <HouseOne></HouseOne>
+            <HouseOne className="animate__animated animate__fadeIn"></HouseOne>
+            <HouseTwo className="animate__animated animate__fadeIn"></HouseTwo>
+            <HouseThree className="animate__animated animate__fadeIn"></HouseThree>
+            <BuildingOne className="animate__animated animate__fadeIn"></BuildingOne>
+            <BuildingTwo className="animate__animated animate__fadeIn"></BuildingTwo>
+            <BuildingThree className="animate__animated animate__fadeIn"></BuildingThree>
         </div>
     )
 }

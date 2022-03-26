@@ -1,14 +1,11 @@
 import * as React from "react"
-
-import Header from "../components/header"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
+const ProjectPage = () => (
   <Layout>
-    <Header />
-    <Seo title="Home" />  
+    <Seo title="Projects" />
   </Layout>
 )
 
-export default IndexPage
+export default ProjectPage

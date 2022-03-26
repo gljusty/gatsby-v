@@ -5,6 +5,7 @@ import './stars.scss'
 
 const BackgroundStar = styled.div`
 position: absolute;
+border-radius: 50%;
 top: 0;
 left: 0;
 background: whitesmoke;
