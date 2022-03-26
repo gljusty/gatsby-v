@@ -21,9 +21,9 @@ place-content: center;
 const Header = ({ siteTitle }) => (
   <StyledHeader>
     <StyledH1>
-      <div id='hi' style={{margin: `2rem`}} className="animate__animated animate__fadeInLeftBig animate__delay-2s">  Hi!  </div>
-      <div id='im' style={{margin: `2rem`}} className="animate__animated animate__fadeInLeftBig animate__faster animate__delay-3s">  I'm  </div>
-      <Link id='bryan' to="/" style={{color: "whitesmoke",textDecoration: "none",margin: "2rem"}} className="animate__animated animate__fadeInDown animate__slower animate__delay-3s">
+      <div id='hi' style={{margin: `1rem`}} className="animate__animated animate__fadeInLeftBig animate__delay-2s">  Hi!  </div>
+      <div id='im' style={{margin: `1rem`}} className="animate__animated animate__fadeInLeftBig animate__faster animate__delay-2s">  I'm  </div>
+      <Link id='bryan' to="/" style={{color: "whitesmoke",textDecoration: "none",margin: "1rem"}} className="animate__animated animate__fadeInDown animate__slower animate__delay-3s">
           {siteTitle}
       </Link>
     </StyledH1>

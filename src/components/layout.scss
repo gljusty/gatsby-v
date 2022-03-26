@@ -10,8 +10,9 @@ html {
   display: none;
 }
 body {
+  overflow: hidden;
   margin: 0;
-  height: 100%;
+  max-height: fit-content;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(180deg,rgb(1,1,1) 80%,#1b3553);

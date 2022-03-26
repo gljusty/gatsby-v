@@ -34,27 +34,12 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0`,
+          height: `100vh`
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `200%`,
-            display: `flex`,
-            placeContent: `center`,
-          }}
-        >
-          {` `}
-          <a href="https://www.github.com/gljusty" style={{
-            color: `white`,
-            textDecoration: "none"
-          }}
-          >
-          GitHub
-          </a>
-        </footer>
+        <Mountains></Mountains>
       </div>
-      <Mountains></Mountains>
     </>
   )
 }
