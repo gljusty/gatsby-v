@@ -32,11 +32,6 @@ const Header = ({ siteTitle }) => (
   </StyledHeader>
 )
 
-
-document.onload = () => {
-  console.log('test')
-}
-
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }

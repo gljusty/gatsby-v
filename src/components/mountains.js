@@ -51,14 +51,14 @@ z-index: 1;
 left: 85%;
 bottom: -97%;
 clip-path: polygon(0% 100%, 12% 27%, 37% 4%, 70% 14%, 86% 44%, 96% 100%, 50% 100%);
-background: linear-gradient(0deg, #4A332D 30%, rgba(225,225,225,1));
+background: linear-gradient(0deg, #4A332D 33%, rgba(225,225,225,1));
 height: 225px;
 width: 200px;
 `
 
 const MountainSix = styled.div`
 clip-path: polygon(1% 100%, 29% 17%, 59% 33%, 73% 1%, 100% 100%);
-background: linear-gradient(0deg, #4A332D 50%, rgba(225,225,225,1));
+background: linear-gradient(0deg, #4A332D 45%, rgba(225,225,225,1));
 height: 200px;
 width: 200px;
 position: absolute;
