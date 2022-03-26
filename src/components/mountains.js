@@ -8,7 +8,7 @@ background: linear-gradient(360deg, rgba(0,0,0,1) 40%, rgba(225,225,225,1));
 z-index: 1;
 width: 520px;
 left: 80%;
-bottom: -97%;
+bottom: -100%;
 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 height: 320px;
 `
@@ -20,7 +20,7 @@ z-index: 2;
 width: 168px;
 height: 120px;
 left: 80%;
-bottom: -97%;
+bottom: -100%;
 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 `
 
@@ -28,7 +28,7 @@ const MountainThree = styled.div`
 position: absolute;
 z-index: 0;
 left: 75%;
-bottom: -97%;
+bottom: -100%;
 background: linear-gradient(360deg, rgba(0,0,0,1) 40%, rgba(225,225,225,1));
 clip-path: polygon(53% 44%, 0% 100%, 100% 100%);
 height: 100px;
@@ -38,7 +38,7 @@ const MountainFour = styled.div`
 position: absolute;
 z-index: 0;
 left: 77%;
-bottom: -97%;
+bottom: -100%;
 background: linear-gradient(360deg, rgba(0,0,0,1) 30%, rgba(225,225,225,1));
 clip-path: polygon(53% 44%, 0% 100%, 100% 100%);
 height: 200px;
@@ -49,7 +49,7 @@ const MountainFive = styled.div`
 position: absolute;
 z-index: 1;
 left: 85%;
-bottom: -97%;
+bottom: -100%;
 clip-path: polygon(0% 100%, 12% 27%, 37% 4%, 70% 14%, 86% 44%, 96% 100%, 50% 100%);
 background: linear-gradient(0deg, #4A332D 33%, rgba(225,225,225,1));
 height: 225px;
@@ -62,7 +62,7 @@ background: linear-gradient(0deg, #4A332D 45%, rgba(225,225,225,1));
 height: 200px;
 width: 200px;
 position: absolute;
-bottom: -97%;
+bottom: -100%;
 left: 90%;
 z-index: 2;
 `
