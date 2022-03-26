@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Stars></Stars>
     <StyledH1>
-      <Link to="/" style={{color: "whitesmoke",textDecoration: "none"}} className="animate__animated animate__fadeInDown">
+      <Link to="/" style={{color: "whitesmoke",textDecoration: "none"}} className="animate__animated animate__fadeInDown animate__delay-2s">
           {siteTitle}
       </Link>
     </StyledH1>
