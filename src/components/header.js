@@ -4,31 +4,38 @@ import 'animate.css';
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import Stars from "./stars"
 
 const StyledHeader = styled.header`
+position: sticky;
+top: 20%;
 height: 2rem;
 background: linear-gradient(270deg, rgba(1,1,1,1), rgba(0,0,0,0.25));
 margin-bottom: 1.45rem;
-transition: translateY() linear 2000ms;
+transition: translate linear 2000ms;
 transform: translateY(100px);
 `
 const StyledH1 = styled.h1`
 display: flex;
-float: right;
 margin-top: 0;
+place-content: center;
 `
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
-    <Stars></Stars>
     <StyledH1>
-      <Link to="/" style={{color: "whitesmoke",textDecoration: "none"}} className="animate__animated animate__fadeInDown animate__delay-2s">
+      <div id='hi' style={{margin: `2rem`}} className="animate__animated animate__fadeInLeftBig animate__delay-2s">  Hi!  </div>
+      <div id='im' style={{margin: `2rem`}} className="animate__animated animate__fadeInLeftBig animate__faster animate__delay-3s">  I'm  </div>
+      <Link id='bryan' to="/" style={{color: "whitesmoke",textDecoration: "none",margin: "2rem"}} className="animate__animated animate__fadeInDown animate__slower animate__delay-3s">
           {siteTitle}
       </Link>
     </StyledH1>
   </StyledHeader>
 )
+
+
+document.onload = () => {
+  console.log('test')
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
