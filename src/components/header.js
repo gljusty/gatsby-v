@@ -11,8 +11,6 @@ top: 20%;
 height: 2rem;
 background: linear-gradient(270deg, rgba(1,1,1,1), rgba(0,0,0,0.25));
 margin-bottom: 1.45rem;
-transition: translate linear 2000ms;
-transform: translateY(100px);
 `
 const StyledH1 = styled.h1`
 display: flex;
