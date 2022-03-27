@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://gljusty.dev`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
   ],

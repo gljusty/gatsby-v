@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "animate.css": "^4.1.1",
+    "babel-plugin-styled-components": "^2.0.6",
     "gatsby": "^4.10.3",
     "gatsby-plugin-gatsby-cloud": "^4.10.1",
     "gatsby-plugin-image": "^2.10.1",
@@ -14,6 +15,7 @@
     "gatsby-plugin-react-helmet": "^5.10.0",
     "gatsby-plugin-sass": "^5.10.2",
     "gatsby-plugin-sharp": "^4.10.2",
+    "gatsby-plugin-styled-components": "^5.10.0",
     "gatsby-source-filesystem": "^4.10.1",
     "gatsby-transformer-sharp": "^4.10.0",
     "prop-types": "^15.8.1",
