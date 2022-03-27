@@ -11,12 +11,24 @@ left: 0;
 background: whitesmoke;
 `
 
+const ShootingStars = styled.div`
+position: absolute;
+`
+
 const Stars = () => {
     return (
         <div>
             <BackgroundStar className="stars_layer_one"/>
             <BackgroundStar className="stars_layer_two"/>
             <BackgroundStar className="stars_layer_three"/>
+            <ShootingStars className="shooting_stars">
+                <div class='shooting_star'></div>
+                <div class='shooting_star'></div>
+                <div class='shooting_star'></div>
+                <div class='shooting_star'></div>
+                <div class='shooting_star'></div>
+                <div class='shooting_star'></div>
+            </ShootingStars>
         </div>
     )
 }

@@ -10,6 +10,7 @@ left: 80%;
 bottom: 0;
 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 height: 320px;
+transition: transform 500ms linear;
 `
 
 const MountainTwo = styled.div`
@@ -22,6 +23,7 @@ height: 120px;
 left: 80%;
 bottom: 0;
 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+transition: transform 500ms linear;
 `
 
 const MountainThree = styled.div`
@@ -33,6 +35,7 @@ background: linear-gradient(360deg, rgba(0,0,0,1) 40%, rgba(245,245,245,1));
 clip-path: polygon(53% 44%, 0% 100%, 100% 100%);
 height: 100px;
 width: 100px;
+transition: transform 500ms linear;
 `
 const MountainFour = styled.div`
 position: absolute;
@@ -43,6 +46,7 @@ background: linear-gradient(360deg, rgba(0,0,0,1) 20%, rgba(245,245,245,1));
 clip-path: polygon(53% 44%, 0% 100%, 100% 100%);
 height: 200px;
 width: 200px;
+transition: transform 500ms linear;
 `
 
 const MountainFive = styled.div`
@@ -54,6 +58,7 @@ clip-path: polygon(0% 100%, 12% 27%, 37% 4%, 70% 14%, 86% 44%, 96% 100%, 50% 100
 background: linear-gradient(-20deg, rgba(0,0,0,1) 5%, #3e2723 35%, #4A332D 45%, rgba(245,245,245,1));
 height: 225px;
 width: 200px;
+transition: transform 500ms linear;
 `
 
 const MountainSix = styled.div`
@@ -65,6 +70,7 @@ position: absolute;
 bottom: 0;
 left: 91.5%;
 z-index: 2;
+transition: transform 500ms linear;
 `
 
 const HouseOne = styled.div`
@@ -114,8 +120,8 @@ bottom: 0;
 left: 66%;
 z-index: 2;
   &:hover {
-      transition: transform 250ms ease-in-out;
-      transform: skewX(5deg);
+      background-color: gold;
+      transition: background-color linear 250ms;
   }
 `
 
@@ -138,19 +144,17 @@ position: absolute;
 bottom: 0;
 left: 64%;
 z-index: 3;
-  ^:after {
+  &:after {
     clip-path: polygon(11% 0, 17% 100%, 46% 100%, 36% 13%, 63% 16%, 66% 46%, 39% 43%, 38% 100%, 89% 100%, 81% 0);
-    background-color: black;
+    background-color: white;
     height: 20px;
     width: 15px;
     position: absolute;
     bottom: 0;
-    left: 64.25%;
-    z-index: 3;
-
+    left: 64.5%;
+    z-index: 4;
   }
 `
-
 const Mountains = () => {
     return (
         <div style={{position: `relative`, width: `140%`, height: `100vh`, bottom: `0`}}>

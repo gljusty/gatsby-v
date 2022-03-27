@@ -5,6 +5,14 @@
   }
   @return unquote($value);
 }
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+
 $shadows-small:  multiple-box-shadow(1000);
 $shadows-medium: multiple-box-shadow(300);
 $shadows-big:    multiple-box-shadow(100);
@@ -62,6 +70,58 @@ $shadows-big:    multiple-box-shadow(100);
     height: 3px;
     background: transparent;
     box-shadow: $shadows-big;
+  }
+}
+
+.shooting_star {
+  $star-count: 50;
+  --star-color: var(--primary-color);
+  --star-tail-length: 6em;
+  --star-tail-height: 2px;
+  --star-width: calc(var(--star-tail-length) / 6);
+  --fall-duration: 9s;
+  --tail-fade-duration: var(--fall-duration);
+
+  position: absolute;
+  top: var(--top-offset);
+  left: var(--left-offset);
+  width: var(--star-tail-length);
+  height: var(--star-tail-height);
+  color: var(--star-color);
+  opacity: 0;
+  background: linear-gradient(45deg, currentColor, transparent);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px currentColor);
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+  
+  @for $i from 1 through $star-count {
+    &:nth-child(#{$i}) {
+      --star-tail-length: #{random_range(500em, 750em) / 100};
+      --top-offset: #{random_range(500vh, 3000vh) / 100};
+      --left-offset: #{random_range(500vw, 5000vw) / 100};
+      --fall-duration: #{random_range(6000, 12000s) / 1000};
+      --fall-delay: #{random_range(0, 10000s) / 1000};
+    }
+  }
+}
+
+@keyframes fall {
+  0% {
+    
+    transform: 
+    rotate(-45deg)
+    translate3d(0rem, 0rem, 0);
+    opacity: 0;
+  } 10% {
+    transform:
+    rotate(-45deg)
+    translate3d(-15rem, 15rem, 10rem);
+    opacity: 100%;
+  } 20% {
+    transform:
+    rotate(-45deg)
+    translate3d(-30em, 30em, 20rem);
+    opacity: 0;
   }
 }
 
