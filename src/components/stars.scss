@@ -46,6 +46,7 @@ $shadows-big:    multiple-box-shadow(100);
   &:after {
     content: " ";
     border-radius: 50%;
+    opacity: 75%;
     position: absolute;
     width: 2px;
     height: 2px;

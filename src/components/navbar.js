@@ -5,22 +5,39 @@ import styled from "styled-components"
 const StyledNav = styled.div`
 font-family: 'Courier';
 position: sticky;
-top: 0%;
-display: inline-flex;
-left: 80%;
+display: flex;
+float: right;
+top: 10%;
+margin-right: 15%;
+`
+
+const StyledNavLink = styled.div`
+    &:hover {
+        transform: scale(1.2);
+        transition: transform 250ms linear;
+    }
 `
 
 const NavBar = () => {
     return (
         <StyledNav>
-            <Link to="/" style={{color: `white`, textDecoration: `none`, margin: `1rem`}}>
-                Home
-            </Link>
+            <StyledNavLink>
+                <Link to="/" style={{color: `whitesmoke`, textDecoration: `none`}}>
+                    Home
+                </Link>
+            </StyledNavLink>
         
-        
-            <Link to="/projects" style={{color: `white`, textDecoration: `none`, margin: `1rem`}}>
-                Projects
-            </Link>
+            <StyledNavLink>
+                <Link to="/projects" style={{color: `whitesmoke`, textDecoration: `none`}}>
+                    Projects
+                </Link>
+            </StyledNavLink>
+
+            <StyledNavLink>
+                <Link to="/resume" style={{color: `whitesmoke`, textDecoration: `none`}}>
+                    Resume
+                </Link>
+            </StyledNavLink>
         </StyledNav>
     )
 }
