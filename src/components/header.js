@@ -8,7 +8,7 @@ position: sticky;
 width: 100%;
 top: 0;
 left: -25%;
-display: block;
+display: flex;
 float: left;
 padding: 1rem;
 
