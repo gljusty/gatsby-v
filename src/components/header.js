@@ -42,7 +42,7 @@ const Header = () => (
     <StyledH1>
       <div id='hi' style={{margin: `1rem`}} className="animate__animated animate__fadeInLeftBig animate__delay-2s">  Hi!  </div>
       <div id='im' style={{margin: `1rem`}} className="animate__animated animate__fadeInLeftBig animate__faster animate__delay-2s">  I'm  </div>
-      <div id='bryan' style={{margin: `1rem`}} className="animate__animated animate__fadeInDown animate__slower animate__delay-3s"> Bryan </div>
+      <div id='bryan' style={{margin: `1rem`}} className="animate__animated animate__fadeInDown animate__delay-3s"> Bryan </div>
     </StyledH1>
     <StyledMsg className="animate__animated animate__fadeIn animate__faster animate__delay-5s">
         <div id='message'> I make stuff in Boulder, Colorado</div>

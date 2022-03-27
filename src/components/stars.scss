@@ -41,7 +41,7 @@ $shadows-big:    multiple-box-shadow(100);
   height: 2px;
   background: transparent;
   box-shadow: $shadows-medium;
-  animation: animStar 1000s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+  animation: animStar1 10s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
     
   &:after {
     content: " ";
@@ -74,13 +74,13 @@ $shadows-big:    multiple-box-shadow(100);
 }
 
 .shooting_star {
-  $star-count: 50;
+  $star-count: 5;
   --star-color: var(--primary-color);
   --star-tail-length: 6em;
   --star-tail-height: 2px;
   --star-width: calc(var(--star-tail-length) / 6);
   --fall-duration: 9s;
-  --tail-fade-duration: var(--fall-duration);
+  --tail-fade-duration: calc(var(--fall-duration) / 2 * 3);
 
   position: absolute;
   top: var(--top-offset);
@@ -92,15 +92,17 @@ $shadows-big:    multiple-box-shadow(100);
   background: linear-gradient(45deg, currentColor, transparent);
   border-radius: 50%;
   filter: drop-shadow(0 0 6px currentColor);
-  animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+  animation: 
+  tail-fade var(--tail-fade-duration) var(--fall-delay) ease-in-out infinite,
+  fall var(--fall-duration) var(--fall-delay) linear infinite;
   
   @for $i from 1 through $star-count {
     &:nth-child(#{$i}) {
       --star-tail-length: #{random_range(500em, 750em) / 100};
       --top-offset: #{random_range(500vh, 3000vh) / 100};
-      --left-offset: #{random_range(500vw, 5000vw) / 100};
+      --left-offset: #{random_range(2000vw, 5000vw) / 100};
       --fall-duration: #{random_range(6000, 12000s) / 1000};
-      --fall-delay: #{random_range(0, 10000s) / 1000};
+      --fall-delay: #{random_range(0, 20000s) / 1000};
     }
   }
 }
@@ -124,6 +126,22 @@ $shadows-big:    multiple-box-shadow(100);
   }
 }
 
+@keyframes tail-fade {
+  0% {
+    width: 100%;
+  }
+
+  20% {
+    width: 0;
+    opacity: 0.4;
+  }
+
+  40% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
 @keyframes animStar {
   from {	 
     transform: translateZ(0px);
@@ -135,9 +153,9 @@ $shadows-big:    multiple-box-shadow(100);
 @keyframes animStar1 {
     0% {	 
       transform: translateZ(0px);
-      opacity: 75%;
+      opacity: 100%;
     } 50% {	
       transform: translateZ(-200px);
-      opacity: 100%;
+      opacity: 75%;
     }
   }

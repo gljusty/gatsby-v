@@ -27,7 +27,6 @@ const Stars = () => {
                 <div class='shooting_star'></div>
                 <div class='shooting_star'></div>
                 <div class='shooting_star'></div>
-                <div class='shooting_star'></div>
             </ShootingStars>
         </div>
     )
