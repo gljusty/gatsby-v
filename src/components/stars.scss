@@ -106,22 +106,21 @@ $shadows-big:    multiple-box-shadow(100);
 }
 
 @keyframes fall {
-  0% {
-    
+  0% {   
     transform: 
     rotate(-45deg)
     translate3d(0rem, 0rem, 0);
     opacity: 0;
-  } 10% {
-    transform:
-    rotate(-45deg)
-    translate3d(-15rem, 15rem, 10rem);
-    opacity: 100%;
   } 20% {
     transform:
     rotate(-45deg)
-    translate3d(-30em, 30em, 20rem);
+    translate3d(-10em, 0em, 0rem);
+    opacity: 100%;
+  } 40% {
     opacity: 0;
+    transform: 
+    rotate(-45deg)
+    translate3d(-20em, 0em, 0rem);
   }
 }
 
