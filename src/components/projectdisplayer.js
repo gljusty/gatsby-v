@@ -32,15 +32,17 @@ class ProjectDisplayer extends React.Component {
                 <StyledProjectTitle>
                   {item.full_name.replace('gljusty', '')}
                 </StyledProjectTitle>
-                <div style={{overflow: `scroll`}}>
+                <div style={{overflow: `scroll`, scrollbarWidth: `none`}}>
                   {item.description}
                 </div>
                 <div style={{display: `inline-flex`}}>
                   {item.topics.map(
                     (topic) =>
                     { return (
-                      <div style={{ fontSize: `0.66em`,fontFamily: `Courier`, marginLeft: `3%`, marginRight: `3%`, marginTop: `1vh`, padding: `3%`, borderRadius: `8px`, backgroundColor: `slategrey`, whiteSpace:`nowrap`}}>{topic}</div>
-                    )
+                      <div style={{display: `flex`, justifyContent: `space-between`, padding: `1vh`}}>
+                        <div style={{ fontSize: `0.56em`,fontFamily: `Courier`, marginLeft: `3%`, marginRight: `3%`, marginTop: `1vh`, minWidth:`3.5vw`, width: `fit-content`, borderRadius: `8px`, backgroundColor: `slategrey`, whiteSpace:`nowrap`}}>{topic}</div>
+                      </div>
+                      )
                   })
                 }
                 </div>
