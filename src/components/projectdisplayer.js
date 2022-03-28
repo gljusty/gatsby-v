@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import line from "leader-line";
-import {Link} from "gatsby";
+
 
 class ProjectDisplayer extends React.Component {
   constructor(props) {
@@ -19,9 +18,8 @@ class ProjectDisplayer extends React.Component {
       .then(response => response.json())
       .then(data => {
           this.setState(state => { return {repos: Array.from(data)}})
-          console.log(this.state.repos)
       })
-      .catch( error => console.error(error));
+      .catch(error => console.error(error));
   }
   render() {
     return (
@@ -29,7 +27,7 @@ class ProjectDisplayer extends React.Component {
           {this.state.repos.map(
               (item) => 
               { return (
-              <StyledListItem onClick={()=> {bruh()}}>
+              <StyledListItem className="animate__animated animate__fadeInLeft">
                 <StyledGitHubLink target="_blank" href={item.html_url}>GitHub</StyledGitHubLink>
                 <StyledProjectTitle>
                   {item.full_name.replace('gljusty', '')}
@@ -105,9 +103,5 @@ margin-right: 0;
     transition: background-color linear 250ms;
   }
 `
-
-const bruh = () => {
-    console.log('bruh')
-}
 
 export default ProjectDisplayer
