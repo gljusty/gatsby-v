@@ -53,6 +53,7 @@ class ProjectDisplayer extends React.Component {
 }
 
 const StyledProjectList = styled.div`
+scrollbar-width: none;
 width: 100vw;
 height: 100vh;
 display: grid;
@@ -60,6 +61,7 @@ flex-direction: column;
 `
 
 const StyledListItem = styled.div`
+scrollbar-width: none;
 vertical-align: top;
 display: inline-block;
 overflow: scroll;
@@ -79,6 +81,7 @@ color: white;
 }
 `
 const StyledProjectTitle = styled.h1`
+scrollbar-width: none;
 display: inline-block;
 width: fit-content;
 line-height: 1.3em;
