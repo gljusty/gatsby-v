@@ -6,7 +6,7 @@ position: absolute;
 background: linear-gradient(360deg, rgba(0,0,0,1) 40%, rgba(225,225,225,1));
 z-index: 1;
 width: 50%;
-left: 90%;
+left: 70%;
 bottom: 0;
 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 height: 30%;
@@ -25,8 +25,8 @@ clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 
 const MountainThree = styled.div`
 position: absolute;
-z-index: 0;
-left: 75%;
+z-index: -1;
+left: 66.5%;
 bottom: 0;
 background: linear-gradient(360deg, rgba(0,0,0,1) 40%, rgba(245,245,245,1));
 clip-path: polygon(53% 44%, 0% 100%, 100% 100%);
@@ -70,9 +70,9 @@ const MountainSeven = styled.div`
 position: absolute;
 background: linear-gradient(350deg, rgba(0,0,0,1) 5%, #3e2723 55%, #4A332D 60%, rgba(225,225,225,1) 100%);
 z-index: 2;
-width: 32%;
-height: 15%;
-left: 100%;
+width: 12%;
+height: 8%;
+left: 70%;
 bottom: 0;
 clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 `
@@ -80,8 +80,8 @@ clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 const HouseOne = styled.div`
 clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 70% 26%, 76% 26%, 78% 44%, 75% 100%);
 background-color: slategrey;
-height: 2%;
-width: 2%;
+height: 1.8%;
+width: 1.6%;
 position: absolute;
 bottom: 0;
 left: 65%;
@@ -90,8 +90,8 @@ z-index: 1;
 const HouseTwo = styled.div`
 clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 70% 26%, 76% 26%, 78% 44%, 75% 100%);
 background-color: skyblue;
-height: 2%;
-width: 2%;
+height: 1.5%;
+width: 1.8%;
 position: absolute;
 bottom: 0;
 left: 68%;
@@ -105,7 +105,7 @@ height: 1.8%;
 width: 1.8%;
 position: absolute;
 bottom: 0;
-left: 67.5%;
+left: 65.5%;
 z-index: -1;
 `
 
@@ -118,10 +118,6 @@ position: absolute;
 bottom: 0;
 left: 66%;
 z-index: 2;
-  &:hover {
-      background-color: gold;
-      transition: background-color linear 250ms;
-  }
 `
 
 const BuildingTwo = styled.div`
@@ -146,7 +142,7 @@ z-index: 3;
 `
 const Mountains = () => {
     return (
-        <div style={{position: `relative`, width: `100%`, height: `100%`, bottom: `0`}}>
+        <div style={{position: `absolute`, width: `100%`, height: `100%`, bottom: `0`, zIndex: `2`, pointerEvents: `none`}}>
             <Mountain id="mountain_one" className="big-background"></Mountain>
             <MountainTwo id="mountain_two"></MountainTwo>
             <MountainThree id="mountain_three"></MountainThree>
@@ -154,12 +150,12 @@ const Mountains = () => {
             <MountainFive id="mountain_five"></MountainFive>
             <MountainSix id="mountain_six"></MountainSix>
             <MountainSeven id="mountain_seven"></MountainSeven>
-            <HouseOne className="animate__animated animate__fadeIn"></HouseOne>
-            <HouseTwo className="animate__animated animate__fadeIn"></HouseTwo>
-            <HouseThree className="animate__animated animate__fadeIn"></HouseThree>
-            <BuildingOne className="animate__animated animate__fadeIn"></BuildingOne>
-            <BuildingTwo className="animate__animated animate__fadeIn"></BuildingTwo>
-            <BuildingThree className="animate__animated animate__fadeIn"></BuildingThree>
+            <HouseOne className="animate__animated animate__fadeInDownBig animate__slower"></HouseOne>
+            <HouseTwo className="animate__animated animate__fadeInDownBig animate__delay-2s animate__slower"></HouseTwo>
+            <HouseThree className="animate__animated animate__fadeInDownBig animate__delay-2s"></HouseThree>
+            <BuildingOne className="animate__animated animate__fadeInDownBig animate__slower"></BuildingOne>
+            <BuildingTwo className="animate__animated animate__fadeInDownBig animate__delay-2s animte__slower"></BuildingTwo>
+            <BuildingThree className="animate__animated animate__fadeInDownBig animate__delay-3s"></BuildingThree>
         </div>
     )
 }

@@ -8,7 +8,8 @@ position: sticky;
 display: flex;
 float: right;
 top: 10%;
-margin-right: 15%;
+margin-right: 12%;
+justify-content: space-between;
 `
 
 const StyledNavLink = styled.div`
