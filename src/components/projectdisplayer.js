@@ -11,15 +11,15 @@ class ProjectDisplayer extends React.Component {
     }
   }
   componentDidMount() {
-      fetch('https://api.github.com/users/gljusty/repos', { 
-      headers: {
-          'Accept' : 'application/vnd.github.v3+json'
-      }})
-      .then(response => response.json())
-      .then(data => {
-          this.setState(state => { return {repos: Array.from(data)}})
-      })
-      .catch(error => console.error(error));
+    fetch('https://api.github.com/users/gljusty/repos', { 
+    headers: {
+        'Accept' : 'application/vnd.github.v3+json'
+    }})
+    .then(response => response.json())
+    .then(data => {
+        this.setState(state => { return {repos: Array.from(data)}})
+    })
+    .catch(error => console.error(error));
   }
   render() {
     return (
@@ -35,13 +35,11 @@ class ProjectDisplayer extends React.Component {
                 <div style={{overflow: `scroll`, scrollbarWidth: `none`}}>
                   {item.description}
                 </div>
-                <div style={{display: `inline-flex`}}>
+                <div style={{display: `flex`, justifyContent: `space-between`, padding: `0.25vh`, marginTop: `20%`, marginBottom: `20%`}}>
                   {item.topics.map(
                     (topic) =>
                     { return (
-                      <div style={{display: `flex`, justifyContent: `space-between`, padding: `1vh`}}>
-                        <div style={{ fontSize: `0.56em`,fontFamily: `Courier`, marginLeft: `3%`, marginRight: `3%`, marginTop: `1vh`, minWidth:`3.5vw`, width: `fit-content`, borderRadius: `8px`, backgroundColor: `slategrey`, whiteSpace:`nowrap`}}>{topic}</div>
-                      </div>
+                      <div style={{ fontSize: `0.6em`,fontFamily: `Courier`, marginLeft: `3%`, marginRight: `3%`, minWidth:`3.5vw`, width: `fit-content`, borderRadius: `8px`, backgroundColor: `slategrey`, whiteSpace:`nowrap`}}>{topic}</div>
                       )
                   })
                 }
@@ -55,11 +53,16 @@ class ProjectDisplayer extends React.Component {
 }
 
 const StyledProjectList = styled.div`
+overflow-y: scroll;
 scrollbar-width: none;
-width: 100vw;
-height: 100vh;
+margin: 25vh 25vw;
+min-width: fit-content;
+max-width: 50w;
+min-height: 25vh;
+max-height: 50vh;
 display: grid;
-flex-direction: column;
+grid-template-columns: auto auto;
+grid-auto-flow: row dense;
 justify-content: space-around;
 `
 
@@ -75,7 +78,7 @@ min-height: 150px;
 min-width: 320px;
 max-width: 40%;
 max-height: 15%;
-margin: 1em;
+margin: 0.11em;
 padding: 2.25%;
 background-color: rgba(1,1,1,0.65);
 border-radius: 8px;

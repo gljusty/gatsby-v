@@ -14,7 +14,7 @@ justify-content: space-between;
 
 const StyledNavLink = styled.div`
     &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         transition: transform 250ms linear;
     }
 `
@@ -27,13 +27,13 @@ const NavBar = () => {
                     Home
                 </Link>
             </StyledNavLink>
-        
+            <span> | </span>
             <StyledNavLink>
                 <Link to="/projects" style={{color: `whitesmoke`, textDecoration: `none`}}>
                     Projects
                 </Link>
             </StyledNavLink>
-
+            <span> | </span>
             <StyledNavLink>
                 <Link to="/resume" style={{color: `whitesmoke`, textDecoration: `none`}}>
                     Resume

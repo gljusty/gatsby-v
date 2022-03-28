@@ -1,6 +1,45 @@
 import * as React from "react";
 import styled from "styled-components";
 
+class Mountains extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    componentDidMount() {
+        const houses = Array.from(document.querySelectorAll('.house'))
+        //console.log(houses)
+        for (let house in houses) {
+            houses[house].addEventListener('animationend', function() {
+                houses[house].classList.remove('animate__animated')
+            }, false)
+        }
+    }
+    
+    render() {
+        return (
+            <div style={{position: `absolute`, width: `100%`, height: `100%`, bottom: `0`, pointerEvents: `none`}}>
+                <Mountain id="mountain_one" className="big-background"></Mountain>
+                <MountainTwo id="mountain_two"></MountainTwo>
+                <MountainThree id="mountain_three"></MountainThree>
+                <MountainFour id="mountain_four"></MountainFour>
+                <MountainFive id="mountain_five"></MountainFive>
+                <MountainSix id="mountain_six"></MountainSix>
+                <MountainSeven id="mountain_seven"></MountainSeven>
+                <HouseOne className="house animate__animated animate__fadeInDownBig animate__slower"></HouseOne>
+                <HouseTwo className="house animate__animated animate__fadeInDownBig animate__delay-2s animate__slower"></HouseTwo>
+                <HouseThree className="house animate__animated animate__fadeInDownBig animate__delay-2s"></HouseThree>
+                <BuildingOne className="house animate__animated animate__fadeInDownBig animate__slower"></BuildingOne>
+                <BuildingTwo className="house animate__animated animate__fadeInDownBig animate__delay-2s animte__slower"></BuildingTwo>
+                <BuildingThree className="house animate__animated animate__fadeInDownBig animate__delay-3s"></BuildingThree>
+            </div>
+        )
+    }
+}
+
+export default Mountains
+
+
 const Mountain = styled.div`
 position: absolute;
 background: linear-gradient(360deg, rgba(0,0,0,1) 40%, rgba(225,225,225,1));
@@ -91,7 +130,7 @@ const HouseTwo = styled.div`
 clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 70% 26%, 76% 26%, 78% 44%, 75% 100%);
 background-color: skyblue;
 height: 1.5%;
-width: 1.8%;
+width: 1.2%;
 position: absolute;
 bottom: 0;
 left: 68%;
@@ -140,24 +179,3 @@ bottom: 0;
 left: 64%;
 z-index: 3;
 `
-const Mountains = () => {
-    return (
-        <div style={{position: `absolute`, width: `100%`, height: `100%`, bottom: `0`, zIndex: `2`, pointerEvents: `none`}}>
-            <Mountain id="mountain_one" className="big-background"></Mountain>
-            <MountainTwo id="mountain_two"></MountainTwo>
-            <MountainThree id="mountain_three"></MountainThree>
-            <MountainFour id="mountain_four"></MountainFour>
-            <MountainFive id="mountain_five"></MountainFive>
-            <MountainSix id="mountain_six"></MountainSix>
-            <MountainSeven id="mountain_seven"></MountainSeven>
-            <HouseOne className="animate__animated animate__fadeInDownBig animate__slower"></HouseOne>
-            <HouseTwo className="animate__animated animate__fadeInDownBig animate__delay-2s animate__slower"></HouseTwo>
-            <HouseThree className="animate__animated animate__fadeInDownBig animate__delay-2s"></HouseThree>
-            <BuildingOne className="animate__animated animate__fadeInDownBig animate__slower"></BuildingOne>
-            <BuildingTwo className="animate__animated animate__fadeInDownBig animate__delay-2s animte__slower"></BuildingTwo>
-            <BuildingThree className="animate__animated animate__fadeInDownBig animate__delay-3s"></BuildingThree>
-        </div>
-    )
-}
-
-export default Mountains
