@@ -108,7 +108,7 @@ height: 1.8vh;
 width: 1.6vw;
 position: absolute;
 bottom: 0;
-left: 65vw;
+left: 65.5vw;
 z-index: 1;
 `
 const HouseTwo = styled.div`
@@ -118,7 +118,7 @@ height: 1.5vh;
 width: 1.2vw;
 position: absolute;
 bottom: 0;
-left: 68vw;
+left: 67.5vw;
 z-index: 1;
 `
 
@@ -141,26 +141,26 @@ width: 2vw;
 position: absolute;
 bottom: 0;
 left: 66vw;
-z-index: 2;
+z-index: 0;
 `
 
 const BuildingTwo = styled.div`
 clip-path: polygon(47% 0, 45% 98%, 62% 98%, 62% 47%, 73% 47%, 73% 77%, 51% 78%, 45% 100%, 100% 100%, 100% 0%);
 background-color: rgba(10,10,10,1);
-height: 3vh;
-width: 2vw;
+height: 2vh;
+width: 1.5vw;
 position: absolute;
 bottom: 0;
-left: 63.5vw;
+left: 64.35vw;
 z-index: -1;
 `
 const BuildingThree = styled.div`
 clip-path: polygon(47% 0, 45% 98%, 62% 98%, 62% 47%, 73% 47%, 73% 77%, 51% 78%, 45% 100%, 100% 100%, 100% 0%);
 background-color: gold;
-height: 2vh;
+height: 1.4vh;
 width: 1.5vw;
 position: absolute;
 bottom: 0;
-left: 63.66vw;
+left: 64.2vw;
 z-index: 3;
 `

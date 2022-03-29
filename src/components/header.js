@@ -5,6 +5,9 @@ import { Link } from "gatsby";
 
 
 const StyledHeader = styled.header`
+position: absolute;
+left: 20vw;
+top: 20vh;
 display: flex;
 float: left;
 padding: 1rem;
@@ -40,18 +43,20 @@ transition: background-color 250ms ease-in-out;
 `
 
 const Header = () => (
-  <StyledHeader>
-    <StyledH1 className="animate__animated animate__fadeInLeftBig animate__faster">
-      <div id='hi' className="animate__animated animate__fadeInLeftBig animate__faster">  Hi!  </div>
-      <div id='im' className="animate__animated animate__fadeInLeftBig">  I'm  </div>
-      <div id='bryan' className="animate__animated animate__fadeInDown animate__slower"> Bryan </div>
-    </StyledH1>
+  <>
+    <StyledHeader>
+      <StyledH1 className="animate__animated animate__fadeInLeftBig animate__faster">
+        <div style={{margin: `1vw`}} id='hi' className="animate__animated animate__fadeInLeftBig animate__faster">  Hi!  </div>
+        <div style={{margin: `1vw`}} id='im' className="animate__animated animate__fadeInLeftBig">  I'm  </div>
+        <div style={{margin: `1vw`}} id='bryan' className="animate__animated animate__fadeInDown animate__slower"> Bryan </div>
+      </StyledH1>
+    </StyledHeader>
     <div style={{display: `hidden`, position: "absolute", top: `0`, left: `0`}}>
-      <StyledMsg as={Link} to="/projects" className="animate__animated animate__fadeInUp animate__faster animate__delay-2s">  
-        I make stuff in Boulder, Colorado
-      </StyledMsg>
+        <StyledMsg as={Link} to="/projects" className="animate__animated animate__fadeInUp animate__faster animate__delay-2s">  
+          I make stuff in Boulder, Colorado
+        </StyledMsg>
     </div>
-  </StyledHeader>
+  </>
   
 )
 

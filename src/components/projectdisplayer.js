@@ -19,7 +19,7 @@ class ProjectDisplay extends React.Component {
     }})
     .then(response => response.json())
     .then(data => {
-        this.setState(state => { return {repos: Array.from(data)}})
+        this.setState({repos: Array.from(data)})
     })
     .then( () => {
       if (typeof window !== undefined) {
@@ -36,7 +36,7 @@ class ProjectDisplay extends React.Component {
                 line.show('draw')
               }
               catch {
-                
+                //dont do anything
               }
             }, 2000)
           }  
@@ -47,6 +47,7 @@ class ProjectDisplay extends React.Component {
     .catch(error => console.error(error));
   }
   componentWillUnmount() {
+    const re = this.state.repos
     const lines = this.state.lines
     for (let line in lines) {
       lines[line].remove()
@@ -59,15 +60,15 @@ class ProjectDisplay extends React.Component {
           {this.state.repos.map(
               (item) => 
               { return (
-              <StyledListItem className="plitem animate__animated animate__fadeInDown animate__slower" key={item.id}>
+              <StyledListItem className="plitem animate__animated animate__fadeInDown animate__faster" key={item.id}>
                 <StyledGitHubLink target="_blank" href={item.html_url}>GitHub</StyledGitHubLink>
                 <StyledProjectTitle>
                   {item.full_name.replace('gljusty', '')}
                 </StyledProjectTitle>
-                <div style={{overflow: `scroll`, scrollbarWidth: `none`}}>
+                <div style={{overflow: `scroll`, scrollbarWidth: `none`, marginTop: `7vh`}}>
                   {item.description}
                 </div>
-                <div style={{display: `flex`, justifyContent: `space-around`, padding: `0.25em`, marginTop: `0.05em`, marginBottom: `2em`}}>
+                <div style={{display: `flex`, justifyContent: `space-around`, padding: `0.25em`, marginTop: `0.5vh`, marginBottom: `2vh`, textAlign: `center`}}>
                   {item.topics.map(
                     (topic) =>
                     { return (
@@ -97,14 +98,19 @@ white-space: nowrap;
 `
 
 const StyledProjectList = styled.div`
+position: absolute;
+top: 0;
+left: 0;
+margin-top: 5vh;
+margin-left: 5vw;
 overflow: scroll;
 border-radius: 8px;
 scrollbar-width: none;
-min-width: fit-content;
-min-height: fit-content;
+min-width: 25vw;
+min-height: 50vh;
 display: grid;
 grid-template-columns: auto;
-grid-auto-rows: 12em;
+grid-auto-rows: 12vw;
 grid-auto-flow: row dense;
 `
 
@@ -113,13 +119,14 @@ scrollbar-width: none;
 display: block;
 overflow: scroll;
 white-space: wrap;
-text-align: center;
-max-height: 11em;
-width: 20em;
-min-width: fit-content;
-max-width: 25em;
-margin: 1em;
-padding: 2.25%;
+text-align: justified;
+height: 10vh;
+min-height: 5vh;
+max-height: 10vh;
+width: 20vw;
+min-width: 20vw;
+max-width: 25vw;
+padding: 1vh 1vw;
 background: linear-gradient(33deg, rgba(0,0,0,0.5), #1b3445);
 border-radius: 8px;
 color: white;
@@ -130,20 +137,20 @@ transition: transform 250ms linear;
 `
 const StyledProjectTitle = styled.h1`
 scrollbar-width: none;
-display: inline-block;
+display: block;
 width: fit-content;
-line-height: 1.3em;
+line-height: 1.5em;
 overflow: scroll;
 `
 
 const StyledGitHubLink = styled.a`
 background-color: slategrey;
-padding: 0.25em;
+padding: 0.1vw 0.25vw;
 border-radius: 8px;
 display: flex;
 font-size: 0.775em;
 font-family: 'Courier';
-margin: 1em;
+margin: 0;
 color: white;
 text-decoration: none;
 float: right;
