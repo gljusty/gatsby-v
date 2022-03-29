@@ -11,15 +11,18 @@ display: block;
 height: 50vh;
 width: 50vw;
 overflow-y: scroll;
+scrollbar-width: none;
 `
 const StyledResumeSectionTitle = styled.h1`
 padding-top: 1vh;
 text-weight: bold;
+scrollbar-width: none;
 `
 
 const StyledResumeSection = styled.section`
 margin: 20px;
 overflow: hidden scroll;
+scrollbar-width: none;
 border-radius: 8px;
 text-align: center;
 height: 10vh;
