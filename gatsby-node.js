@@ -14,7 +14,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /react-pdf/,
+            test: /leader-line-new/,
             use: loaders.null(),
           },
         ],

@@ -23,7 +23,7 @@ class ProjectDisplay extends React.Component {
         this.setState(state => { return {repos: Array.from(data)}})
     })
     .then( () => {
-      if (typeof document !== undefined) {
+      if (typeof window !== undefined) {
         const start = document.getElementById('house_one')
         const ends = Array.from(document.querySelectorAll('.plitem'))
         console.log(ends)
