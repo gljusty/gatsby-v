@@ -22,19 +22,21 @@ class ProjectDisplay extends React.Component {
         this.setState(state => { return {repos: Array.from(data)}})
     })
     .then( () => {
-      const start = document.getElementById('house_one')
-      const ends = Array.from(document.querySelectorAll('.plitem'))
-      console.log(ends)
-      for (let end in ends) {
-        if (this.state.initial == true) {
-          setTimeout(() => {
-            const line = new LeaderLine(start, ends[end], {hide: true, color: `aquamarine`, startSocket: `left`,endSocket: `bottom`, path: `magnet`, endPlug: `behind`})
-            const eline = document.querySelector('.leader-line:last-of-type')
-            eline.style.zIndex = -1
-            this.setState({lines: [...this.state.lines, line]})
-            line.show('draw')
-          }, 2000)
-        }  
+      if (document !== undefined) {
+        const start = document.getElementById('house_one')
+        const ends = Array.from(document.querySelectorAll('.plitem'))
+        console.log(ends)
+        for (let end in ends) {
+          if (this.state.initial == true) {
+            setTimeout(() => {
+              const line = new LeaderLine(start, ends[end], {hide: true, color: `aquamarine`, startSocket: `left`,endSocket: `bottom`, path: `magnet`, endPlug: `behind`})
+              const eline = document.querySelector('.leader-line:last-of-type')
+              eline.style.zIndex = -1
+              this.setState({lines: [...this.state.lines, line]})
+              line.show('draw')
+            }, 2000)
+          }  
+        }
       }
       this.state.initial = false;
     })
