@@ -3,6 +3,7 @@ import * as React from "react"
 import styled from "styled-components"
 
 const StyledNav = styled.div`
+font-size: 1em;
 font-family: 'Courier';
 position: sticky;
 display: flex;

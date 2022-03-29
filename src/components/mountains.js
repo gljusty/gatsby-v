@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Mountains = () => {
     return (
-        <div style={{position: `absolute`, width: `100vw`, height: `100vh`, bottom: `0`, pointerEvents: `none`}}>
+        <div style={{position: `absolute`, width: `100vw`, height: `100vh`, bottom: `0`, left: `0`, pointerEvents: `none`}}>
             <Mountain id="mountain_one"></Mountain>
             <MountainTwo id="mountain_two"></MountainTwo>
             <MountainThree id="mountain_three"></MountainThree>
