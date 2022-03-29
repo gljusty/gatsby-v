@@ -22,11 +22,13 @@ const Stars = () => {
             <BackgroundStar className="stars_layer_two"/>
             <BackgroundStar className="stars_layer_three"/>
             <ShootingStars className="shooting_stars">
-                <div class='shooting_star'></div>
-                <div class='shooting_star'></div>
-                <div class='shooting_star'></div>
-                <div class='shooting_star'></div>
-                <div class='shooting_star'></div>
+                <div className='shooting_star'></div>
+                <div className='shooting_star'></div>
+                <div className='shooting_star'></div>
+                <div className='shooting_star'></div>
+                <div className='shooting_star'></div>
+                <div className='shooting_star'></div>
+                <div className='shooting_star'></div>
             </ShootingStars>
         </div>
     )

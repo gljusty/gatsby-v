@@ -99,11 +99,11 @@ $shadows-big:    multiple-box-shadow(100);
   
   @for $i from 1 through $star-count {
     &:nth-child(#{$i}) {
-      --star-tail-length: #{random_range(500em, 750em) / 100};
-      --top-offset: #{random_range(500vh, 3000vh) / 100};
-      --left-offset: #{random_range(2000vw, 5000vw) / 100};
-      --fall-duration: #{random_range(6000, 12000s) / 1000};
-      --fall-delay: #{random_range(0, 20000s) / 1000};
+      --star-tail-length: #{calc(random_range(500em, 750em) / 100)};
+      --top-offset: #{calc(random_range(500vh, 3000vh) / 100)};
+      --left-offset: #{calc(random_range(2000vw, 10000vw) / 100)};
+      --fall-duration: #{calc(random_range(6000, 12000s) / 1000)};
+      --fall-delay: #{calc(random_range(0, 20000s) / 1000)};
     }
   }
 }

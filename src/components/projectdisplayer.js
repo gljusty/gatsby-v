@@ -1,13 +1,15 @@
 import * as React from "react";
 import styled from "styled-components";
+import LeaderLine from "leader-line-new";
 
-
-class ProjectDisplayer extends React.Component {
+class ProjectDisplay extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      repos: []
+      repos: [],
+      initial: true,
+      lines: []
     }
   }
   componentDidMount() {
@@ -19,15 +21,40 @@ class ProjectDisplayer extends React.Component {
     .then(data => {
         this.setState(state => { return {repos: Array.from(data)}})
     })
+    .then( () => {
+      const start = document.getElementById('house_one')
+      const ends = Array.from(document.querySelectorAll('.plitem'))
+      console.log(ends)
+      for (let end in ends) {
+        if (this.state.initial == true) {
+          setTimeout(() => {
+            const line = new LeaderLine(start, ends[end], {hide: true, color: `aquamarine`, startSocket: `left`,endSocket: `bottom`, path: `magnet`, endPlug: `behind`})
+            const eline = document.querySelector('.leader-line:last-of-type')
+            eline.style.zIndex = -1
+            this.setState({lines: [...this.state.lines, line]})
+            line.show('draw')
+          }, 2000)
+        }  
+      }
+      this.state.initial = false;
+    })
     .catch(error => console.error(error));
+  }
+  componentWillUnmount() {
+    const lines = this.state.lines
+    console.log(lines)
+    for (let line in lines) {
+      lines[line].remove()
+    }
+
   }
   render() {
     return (
-      <StyledProjectList>
+      <StyledProjectList id="project_list" className="animate__animated animate__fadeInLeftBig">
           {this.state.repos.map(
               (item) => 
               { return (
-              <StyledListItem className="animate__animated animate__fadeInLeftBig">
+              <StyledListItem className="plitem animate__animated animate__fadeInDown animate__slower" key={item.id}>
                 <StyledGitHubLink target="_blank" href={item.html_url}>GitHub</StyledGitHubLink>
                 <StyledProjectTitle>
                   {item.full_name.replace('gljusty', '')}
@@ -35,11 +62,21 @@ class ProjectDisplayer extends React.Component {
                 <div style={{overflow: `scroll`, scrollbarWidth: `none`}}>
                   {item.description}
                 </div>
-                <div style={{display: `flex`, justifyContent: `space-between`, padding: `0.25vh`, marginTop: `20%`, marginBottom: `20%`}}>
+                <div style={{display: `flex`, justifyContent: `space-around`, padding: `0.25em`, marginTop: `0.05em`, marginBottom: `2em`}}>
                   {item.topics.map(
                     (topic) =>
                     { return (
-                      <div style={{ fontSize: `0.6em`,fontFamily: `Courier`, marginLeft: `3%`, marginRight: `3%`, minWidth:`3.5vw`, width: `fit-content`, borderRadius: `8px`, backgroundColor: `slategrey`, whiteSpace:`nowrap`}}>{topic}</div>
+                      <div key={topic} style={{ fontSize: `0.6em`,
+                      fontFamily: `Courier`,
+                      marginLeft: `3%`,
+                      marginRight: `3%`,
+                      minWidth:`3.5vw`,
+                      width: `fit-content`,
+                      borderRadius: `8px`,
+                      backgroundColor: `slategrey`,
+                      whiteSpace:`nowrap`}}>
+                        {topic}
+                      </div>
                       )
                   })
                 }
@@ -53,40 +90,42 @@ class ProjectDisplayer extends React.Component {
 }
 
 const StyledProjectList = styled.div`
+border-radius: 8px;
+background-color: transparent;
 overflow-y: scroll;
 scrollbar-width: none;
 margin: 25vh 25vw;
 min-width: fit-content;
+min-height: fit-content;
 max-width: 50w;
-min-height: 25vh;
 max-height: 50vh;
 display: grid;
 grid-template-columns: auto auto;
+grid-auto-rows: 12em;
 grid-auto-flow: row dense;
 justify-content: space-around;
 `
 
 const StyledListItem = styled.div`
 scrollbar-width: none;
-vertical-align: top;
-display: inline-block;
+display: block;
 overflow: scroll;
 white-space: wrap;
 text-align: center;
-width: fit-content;
-min-height: 150px;
-min-width: 320px;
-max-width: 40%;
-max-height: 15%;
-margin: 0.11em;
+max-height: 10em;
+width: 20em;
+min-width: fit-content;
+max-width: 25em;
+max-height: 8em;
+margin: 1em;
 padding: 2.25%;
-background-color: rgba(1,1,1,0.65);
+background: linear-gradient(33deg, rgba(0,0,0,0.5), #1b3445);
 border-radius: 8px;
 color: white;
-    &:hover {
-    background-color: gold;
-    transition: background-color linear 250ms;
-}
+transition: transform 250ms linear;  
+  &:hover {
+    transform: scale(1.25);
+  }
 `
 const StyledProjectTitle = styled.h1`
 scrollbar-width: none;
@@ -108,11 +147,11 @@ color: white;
 text-decoration: none;
 float: right;
 top: 0;
-margin-right: 0;
+margin-right: 1.8em;
+transition: background-color linear 250ms;
   &:hover {
     background-color: lightblue;
-    transition: background-color linear 250ms;
   }
 `
 
-export default ProjectDisplayer
+export default ProjectDisplay

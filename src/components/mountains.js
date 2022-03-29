@@ -1,40 +1,24 @@
 import * as React from "react";
 import styled from "styled-components";
 
-class Mountains extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
-    componentDidMount() {
-        const houses = Array.from(document.querySelectorAll('.house'))
-        //console.log(houses)
-        for (let house in houses) {
-            houses[house].addEventListener('animationend', function() {
-                houses[house].classList.remove('animate__animated')
-            }, false)
-        }
-    }
-    
-    render() {
-        return (
-            <div style={{position: `absolute`, width: `100%`, height: `100%`, bottom: `0`, pointerEvents: `none`}}>
-                <Mountain id="mountain_one" className="big-background"></Mountain>
-                <MountainTwo id="mountain_two"></MountainTwo>
-                <MountainThree id="mountain_three"></MountainThree>
-                <MountainFour id="mountain_four"></MountainFour>
-                <MountainFive id="mountain_five"></MountainFive>
-                <MountainSix id="mountain_six"></MountainSix>
-                <MountainSeven id="mountain_seven"></MountainSeven>
-                <HouseOne className="house animate__animated animate__fadeInDownBig animate__slower"></HouseOne>
-                <HouseTwo className="house animate__animated animate__fadeInDownBig animate__delay-2s animate__slower"></HouseTwo>
-                <HouseThree className="house animate__animated animate__fadeInDownBig animate__delay-2s"></HouseThree>
-                <BuildingOne className="house animate__animated animate__fadeInDownBig animate__slower"></BuildingOne>
-                <BuildingTwo className="house animate__animated animate__fadeInDownBig animate__delay-2s animte__slower"></BuildingTwo>
-                <BuildingThree className="house animate__animated animate__fadeInDownBig animate__delay-3s"></BuildingThree>
-            </div>
-        )
-    }
+const Mountains = () => {
+    return (
+        <div style={{position: `absolute`, width: `100%`, height: `100%`, bottom: `0`, pointerEvents: `none`}}>
+            <Mountain id="mountain_one"></Mountain>
+            <MountainTwo id="mountain_two"></MountainTwo>
+            <MountainThree id="mountain_three"></MountainThree>
+            <MountainFour id="mountain_four"></MountainFour>
+            <MountainFive id="mountain_five"></MountainFive>
+            <MountainSix id="mountain_six"></MountainSix>
+            <MountainSeven id="mountain_seven"></MountainSeven>
+            <HouseOne id="house_one" className="house"></HouseOne>
+            <HouseTwo id="house_two" className="house"></HouseTwo>
+            <HouseThree id="house_three" className="house"></HouseThree>
+            <BuildingOne id="bldg_one" className="house"></BuildingOne>
+            <BuildingTwo id="bldg_two" className="house"></BuildingTwo>
+            <BuildingThree id="bldg_three" className="house"></BuildingThree>
+        </div>
+    )
 }
 
 export default Mountains
@@ -64,7 +48,7 @@ clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 
 const MountainThree = styled.div`
 position: absolute;
-z-index: -1;
+z-index: 0;
 left: 66.5%;
 bottom: 0;
 background: linear-gradient(360deg, rgba(0,0,0,1) 40%, rgba(245,245,245,1));
