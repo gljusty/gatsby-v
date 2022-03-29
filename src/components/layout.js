@@ -10,14 +10,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div>
-        <main style={{height: `100vh`, width: `100vw`, overflow: `hidden`}}>
-          <Stars></Stars>
-          <NavBar></NavBar>
-          {children}
-          <Mountains></Mountains>
-        </main>
-      </div>
+      <main style={{minHeight: `100vh`, minWidth: `100vw`, overflow: `hidden`, backgroundSize: `cover`}}>
+        <NavBar/>
+        <Stars/>
+        {children}
+        <Mountains/>
+      </main>
     </>
   )
 }

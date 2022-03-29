@@ -7,7 +7,6 @@ class ProjectDisplay extends React.Component {
     super(props);
 
     this.state = {
-      house_location: this.props.house_location,
       repos: [],
       initial: true,
       lines: []
@@ -26,26 +25,29 @@ class ProjectDisplay extends React.Component {
       if (typeof window !== undefined) {
         const start = document.getElementById('house_one')
         const ends = Array.from(document.querySelectorAll('.plitem'))
-        console.log(ends)
         for (let end in ends) {
-          if (this.state.initial == true) {
+          if (this.state.initial === true) {
             setTimeout(() => {
-              const line = new LeaderLine(start, ends[end], {hide: true, color: `aquamarine`, startSocket: `left`,endSocket: `bottom`, path: `magnet`, endPlug: `behind`})
-              const eline = document.querySelector('.leader-line:last-of-type')
-              eline.style.zIndex = -1
-              this.setState({lines: [...this.state.lines, line]})
-              line.show('draw')
+              try {
+                const line = new LeaderLine(start, ends[end], {hide: true, color: `aquamarine`, startSocket: `left`, endSocket: `right`, path: `fluid`, endPlug: `behind`, animOptions: {duration: 50}})
+                const eline = document.querySelector('.leader-line:last-of-type')
+                eline.style.zIndex = -1
+                this.setState({lines: [...this.state.lines, line]})
+                line.show('draw')
+              }
+              catch {
+                
+              }
             }, 2000)
           }  
         }
       }
-      this.state.initial = false;
+      this.setState({initial: false})
     })
     .catch(error => console.error(error));
   }
   componentWillUnmount() {
     const lines = this.state.lines
-    console.log(lines)
     for (let line in lines) {
       lines[line].remove()
     }
@@ -53,7 +55,7 @@ class ProjectDisplay extends React.Component {
   }
   render() {
     return (
-      <StyledProjectList id="project_list" className="animate__animated animate__fadeInLeftBig">
+      <StyledProjectList id="project_list">
           {this.state.repos.map(
               (item) => 
               { return (
@@ -69,17 +71,9 @@ class ProjectDisplay extends React.Component {
                   {item.topics.map(
                     (topic) =>
                     { return (
-                      <div key={topic} style={{ fontSize: `0.6em`,
-                      fontFamily: `Courier`,
-                      marginLeft: `3%`,
-                      marginRight: `3%`,
-                      minWidth:`3.5vw`,
-                      width: `fit-content`,
-                      borderRadius: `8px`,
-                      backgroundColor: `slategrey`,
-                      whiteSpace:`nowrap`}}>
+                      <StyledTopicBadge key={topic}>
                         {topic}
-                      </div>
+                      </StyledTopicBadge>
                       )
                   })
                 }
@@ -92,21 +86,26 @@ class ProjectDisplay extends React.Component {
   };
 }
 
-const StyledProjectList = styled.div`
+const StyledTopicBadge = styled.div`
+font-size: 0.6em;
+font-family: 'Courier';
+min-width: 3.5vw;
+width: fit-content;
 border-radius: 8px;
-background-color: transparent;
-overflow-y: scroll;
+background-color: slategrey;
+white-space: nowrap;
+`
+
+const StyledProjectList = styled.div`
+overflow: scroll;
+border-radius: 8px;
 scrollbar-width: none;
-margin: 25vh 25vw;
 min-width: fit-content;
 min-height: fit-content;
-max-width: 50w;
-max-height: 50vh;
 display: grid;
-grid-template-columns: auto auto;
+grid-template-columns: auto;
 grid-auto-rows: 12em;
 grid-auto-flow: row dense;
-justify-content: space-around;
 `
 
 const StyledListItem = styled.div`
@@ -115,11 +114,10 @@ display: block;
 overflow: scroll;
 white-space: wrap;
 text-align: center;
-max-height: 10em;
+max-height: 11em;
 width: 20em;
 min-width: fit-content;
 max-width: 25em;
-max-height: 8em;
 margin: 1em;
 padding: 2.25%;
 background: linear-gradient(33deg, rgba(0,0,0,0.5), #1b3445);

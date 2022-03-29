@@ -13,6 +13,8 @@ justify-content: space-between;
 `
 
 const StyledNavLink = styled.div`
+color: whitesmoke;
+text-decoration: none;
     &:hover {
         transform: scale(1.1);
         transition: transform 250ms linear;
@@ -22,22 +24,16 @@ const StyledNavLink = styled.div`
 const NavBar = () => {
     return (
         <StyledNav>
-            <StyledNavLink>
-                <Link to="/" style={{color: `whitesmoke`, textDecoration: `none`}}>
-                    Home
-                </Link>
+            <StyledNavLink as={Link} to='/'>
+                Home
             </StyledNavLink>
             <span> | </span>
-            <StyledNavLink>
-                <Link to="/projects" style={{color: `whitesmoke`, textDecoration: `none`}}>
-                    Projects
-                </Link>
+            <StyledNavLink as={Link} to='/projects' id='project_link'>
+                Projects
             </StyledNavLink>
             <span> | </span>
-            <StyledNavLink>
-                <Link to="/resume" style={{color: `whitesmoke`, textDecoration: `none`}}>
-                    Resume
-                </Link>
+            <StyledNavLink as={Link} to='/resume'>
+                Resume
             </StyledNavLink>
         </StyledNav>
     )
