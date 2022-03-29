@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Mountains = () => {
     return (
-        <div style={{position: `absolute`, width: `100vw`, height: `100vh`, bottom: `0`, left: `0`, pointerEvents: `none`}}>
+        <div style={{position: `absolute`, width: `100vw`, height: `100vh`, bottom: `0`, left: `0`, pointerEvents: `none`, overflow: `auto`}}>
             <Mountain id="mountain_one"></Mountain>
             <MountainTwo id="mountain_two"></MountainTwo>
             <MountainThree id="mountain_three"></MountainThree>
@@ -25,7 +25,7 @@ export default Mountains
 
 
 const Mountain = styled.div`
-position: absolute;
+position: fixed;
 background: linear-gradient(360deg, rgba(0,0,0,1) 40%, rgba(225,225,225,1));
 z-index: 1;
 width: 30vw;
@@ -37,7 +37,7 @@ clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 `
 
 const MountainTwo = styled.div`
-position: absolute;
+position: fixed;
 background: linear-gradient(350deg, rgba(0,0,0,1) 5%, #3e2723 55%, #4A332D 60%, rgba(225,225,225,1) 100%);
 z-index: 2;
 width: 15vw;
@@ -48,7 +48,7 @@ clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 `
 
 const MountainThree = styled.div`
-position: absolute;
+position: fixed;
 z-index: 0;
 left: 70vw;
 bottom: 0;
@@ -58,7 +58,7 @@ height: 15vh;
 width: 10vw;
 `
 const MountainFour = styled.div`
-position: absolute;
+position: fixed;
 z-index: 0;
 left: 70vw;
 bottom: 0;
@@ -69,7 +69,7 @@ width: 20vw;
 `
 
 const MountainFive = styled.div`
-position: absolute;
+position: fixed;
 z-index: 1;
 left: 87.5vw;
 bottom: 0;
@@ -84,14 +84,14 @@ clip-path: polygon(1% 100%, 29% 17%, 59% 33%, 73% 1%, 100% 100%);
 background: linear-gradient(-20deg, rgba(0,0,0,1) 5%, #3e2723 35%, #4A332D 45%, rgba(245,245,245,1));
 height: 22vh;
 width: 20vw;
-position: absolute;
+position: fixed;
 bottom: 0;
 left: 90vw;
 z-index: 2;
 `
 
 const MountainSeven = styled.div`
-position: absolute;
+position: fixed;
 background: linear-gradient(350deg, rgba(0,0,0,1) 5%, #3e2723 55%, #4A332D 60%, rgba(225,225,225,1) 100%);
 z-index: 2;
 width: 12vw;
@@ -106,7 +106,7 @@ clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 70% 26%, 76% 26%, 78% 44%
 background-color: slategrey;
 height: 1.8vh;
 width: 1.6vw;
-position: absolute;
+position: fixed;
 bottom: 0;
 left: 65.5vw;
 z-index: 1;
@@ -116,7 +116,7 @@ clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 70% 26%, 76% 26%, 78% 44%
 background-color: skyblue;
 height: 1.5vh;
 width: 1.2vw;
-position: absolute;
+position: fixed;
 bottom: 0;
 left: 67.5vw;
 z-index: 1;
@@ -127,7 +127,7 @@ clip-path: polygon(20% 100%, 17% 45%, 50% 3%, 69% 32%, 70% 26%, 76% 26%, 78% 44%
 background-color: black;
 height: 1.8vh;
 width: 1.8vw;
-position: absolute;
+position: fixed;
 bottom: 0;
 left: 65.5vw;
 z-index: -1;
@@ -138,7 +138,7 @@ clip-path: polygon(47% 0, 45% 98%, 62% 98%, 62% 47%, 73% 47%, 73% 77%, 51% 78%, 
 background-color: black;
 height: 3vh;
 width: 2vw;
-position: absolute;
+position: fixed;
 bottom: 0;
 left: 66vw;
 z-index: 0;
@@ -149,7 +149,7 @@ clip-path: polygon(47% 0, 45% 98%, 62% 98%, 62% 47%, 73% 47%, 73% 77%, 51% 78%, 
 background-color: rgba(10,10,10,1);
 height: 2vh;
 width: 1.5vw;
-position: absolute;
+position: fixed;
 bottom: 0;
 left: 64.35vw;
 z-index: -1;
@@ -159,7 +159,7 @@ clip-path: polygon(47% 0, 45% 98%, 62% 98%, 62% 47%, 73% 47%, 73% 77%, 51% 78%, 
 background-color: gold;
 height: 1.4vh;
 width: 1.5vw;
-position: absolute;
+position: fixed;
 bottom: 0;
 left: 64.2vw;
 z-index: 3;
