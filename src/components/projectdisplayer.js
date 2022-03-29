@@ -7,6 +7,7 @@ class ProjectDisplay extends React.Component {
     super(props);
 
     this.state = {
+      house_location: this.props.house_location,
       repos: [],
       initial: true,
       lines: []
@@ -22,7 +23,7 @@ class ProjectDisplay extends React.Component {
         this.setState(state => { return {repos: Array.from(data)}})
     })
     .then( () => {
-      if (document !== undefined) {
+      if (typeof document !== undefined) {
         const start = document.getElementById('house_one')
         const ends = Array.from(document.querySelectorAll('.plitem'))
         console.log(ends)
