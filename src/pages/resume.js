@@ -5,7 +5,6 @@ import Seo from "../components/seo"
 const ResumePage = () => (
     <Layout>
         <Seo title="Resume" />
-        <ResumeDisplay />
     </Layout>
 )
 
