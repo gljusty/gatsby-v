@@ -3,9 +3,8 @@ html {
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
-  overflow-y: scroll;
   scrollbar-width: none;
-  background: radial-gradient(ellipse at bottom, rgba(73, 101, 134, 1) 1%, rgb(1,1,1));
+  background: radial-gradient(ellipse at bottom, rgba(73, 101, 134, 1) 1vh, rgb(1,1,1));
   background-size: cover;
 }
 ::-webkit-scrollbar {

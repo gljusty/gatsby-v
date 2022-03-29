@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <main style={{minHeight: `100vh`, minWidth: `100vw`, overflow: `hidden`, backgroundSize: `cover`}}>
+      <main style={{minHeight: `100vh`, minWidth: `100vw`, overflow: `hidden`}}>
         <NavBar/>
         <Stars/>
         {children}

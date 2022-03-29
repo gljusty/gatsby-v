@@ -29,7 +29,7 @@ class ProjectDisplay extends React.Component {
           if (this.state.initial === true) {
             setTimeout(() => {
               try {
-                const line = new LeaderLine(start, ends[end], {hide: true, color: `aquamarine`, startSocket: `left`, endSocket: `right`, path: `fluid`, endPlug: `behind`, animOptions: {duration: 50}})
+                const line = new LeaderLine(start, ends[end], {hide: true, color: `aquamarine`, startSocket: `left`, endSocket: `right`, path: `fluid`, endPlug: `behind`, animOptions: ['duration: 5000']})
                 const eline = document.querySelector('.leader-line:last-of-type')
                 eline.style.zIndex = -1
                 this.setState({lines: [...this.state.lines, line]})
@@ -38,7 +38,7 @@ class ProjectDisplay extends React.Component {
               catch {
                 //dont do anything
               }
-            }, 2000)
+            }, 1000)
           }  
         }
       }
@@ -47,12 +47,10 @@ class ProjectDisplay extends React.Component {
     .catch(error => console.error(error));
   }
   componentWillUnmount() {
-    const re = this.state.repos
     const lines = this.state.lines
     for (let line in lines) {
       lines[line].remove()
     }
-
   }
   render() {
     return (
@@ -60,7 +58,7 @@ class ProjectDisplay extends React.Component {
           {this.state.repos.map(
               (item) => 
               { return (
-              <StyledListItem className="plitem animate__animated animate__fadeInDown animate__faster" key={item.id}>
+              <StyledListItem className="plitem animate__animated animate__fadeInLeft animate__faster" key={item.id}>
                 <StyledGitHubLink target="_blank" href={item.html_url}>GitHub</StyledGitHubLink>
                 <StyledProjectTitle>
                   {item.full_name.replace('gljusty', '')}
@@ -90,7 +88,9 @@ class ProjectDisplay extends React.Component {
 const StyledTopicBadge = styled.div`
 font-size: 0.6em;
 font-family: 'Courier';
-min-width: 3.5vw;
+min-width: 2vw;
+padding-left: 2px;
+padding-right: 2px;
 width: fit-content;
 border-radius: 8px;
 background-color: slategrey;
@@ -98,20 +98,19 @@ white-space: nowrap;
 `
 
 const StyledProjectList = styled.div`
-position: absolute;
-top: 0;
-left: 0;
-margin-top: 5vh;
-margin-left: 5vw;
+position: relative;
+margin: 20vh 0 0 5vh;
 overflow: scroll;
 border-radius: 8px;
 scrollbar-width: none;
-min-width: 25vw;
-min-height: 50vh;
+width: fit-content;
+height: fit-content;
 display: grid;
 grid-template-columns: auto;
-grid-auto-rows: 12vw;
-grid-auto-flow: row dense;
+grid-template-rows: auto auto auto auto;
+grid-auto-rows: 15vh;
+grid-auto-columns: 25vw;
+grid-auto-flow: dense;
 `
 
 const StyledListItem = styled.div`
@@ -124,7 +123,7 @@ height: 10vh;
 min-height: 5vh;
 max-height: 10vh;
 width: 20vw;
-min-width: 20vw;
+min-width: 200px;
 max-width: 25vw;
 padding: 1vh 1vw;
 background: linear-gradient(33deg, rgba(0,0,0,0.5), #1b3445);
@@ -141,6 +140,7 @@ display: block;
 width: fit-content;
 line-height: 1.5em;
 overflow: scroll;
+whitespace: nowrap;
 `
 
 const StyledGitHubLink = styled.a`
@@ -148,7 +148,7 @@ background-color: slategrey;
 padding: 0.1vw 0.25vw;
 border-radius: 8px;
 display: flex;
-font-size: 0.775em;
+font-size: 0.8em;
 font-family: 'Courier';
 margin: 0;
 color: white;

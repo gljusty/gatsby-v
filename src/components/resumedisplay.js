@@ -1,40 +1,72 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 const StyledResumeContainer = styled.div`
-opacity: 80%;
+background-color: rgba(100,10,10,0.25);
+border-radius: 8px;
 padding: 0;
-margin: auto auto;
-position: absolute;
-top: 0;
-left: 0;
-height: 50%;
-width: 50%;
+margin: 25vh 25vw;
+position: relative;
+display: block;
+height: 50vh;
+width: 50vw;
+overflow-y: scroll;
+`
+const StyledResumeSectionTitle = styled.h1`
+padding-top: 1vh;
+text-weight: bold;
+`
+
+const StyledResumeSection = styled.section`
+margin: 20px;
+overflow: hidden scroll;
+border-radius: 8px;
+text-align: center;
+height: 10vh;
+transition: all 250ms linear;
+background-color: rgba(1,1,1,0.75);
+  &:hover {
+    height: 20vh;
+    background-color: rgba(1,1,1,1);
+}
 `
 
 const ResumeDisplay = () => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+  React.useEffect(() => {
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-    setPageNumber(1);
-  }
-
-  function changePage(offset) {
-    setPageNumber(prevPageNumber => prevPageNumber + offset);
-  }
-
-  function previousPage() {
-    changePage(-1);
-  }
-
-  function nextPage() {
-    changePage(1);
-  }
-
+  })
   return (
-    <StyledResumeContainer>
+    <StyledResumeContainer className='animate__animated animate__fadeInDownBig'>
+      <StyledResumeSection className='_section'>
+        <StyledResumeSectionTitle>
+          Skills
+        </StyledResumeSectionTitle>
+        
+      </StyledResumeSection>
+      <StyledResumeSection className='_section'>
+      <StyledResumeSectionTitle>
+          Experience
+      </StyledResumeSectionTitle>
+        Test Section 2. Test paragraph of content. Test sentence of content. Test sentence number 4. 10239  ` ` special characters $$#24**7468&&
+        <h1>
+          Test inner content. Separated by anonymous element.
+        </h1>Test Section 2
+        Test Section 2
+        Test Section 2
+        Test Section 2
+        Test Section 2
+        Test Section 2
+        Test Section 2
+        Test Section 2
+        Test Section 2
+        Test Section 2
+      </StyledResumeSection>
+      <StyledResumeSection className='_section'>
+      <StyledResumeSectionTitle>
+          Education & Certifications
+      </StyledResumeSectionTitle>
+        Test Section 3
+      </StyledResumeSection>
     </StyledResumeContainer>
   );
 }
