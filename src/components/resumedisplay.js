@@ -10,7 +10,7 @@ const options = {
 };
 
 const ResumeDisplay = () => {
-  const [file, setFile] = useState('../static/Resume_2022.pdf');
+  const [file, setFile] = useState('/static/Resume_2022.pdf');
   const [numPages, setNumPages] = useState(null);
 
   function onFileChange(event) {
