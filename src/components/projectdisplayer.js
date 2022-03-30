@@ -38,7 +38,7 @@ class ProjectDisplay extends React.Component {
               catch {
                 //dont do anything
               }
-            }, 1000)
+            }, 750)
           }  
         }
       }
@@ -121,7 +121,7 @@ white-space: wrap;
 text-align: justified;
 height: 10vh;
 min-height: 5vh;
-max-height: 10vh;
+flex-direction: vertical;
 width: 20vw;
 min-width: 200px;
 max-width: 25vw;
@@ -129,9 +129,9 @@ padding: 1vh 1vw;
 background: linear-gradient(33deg, rgba(0,0,0,0.5), #1b3445);
 border-radius: 8px;
 color: white;
-transition: transform 250ms linear;  
+transition: all 100ms linear;  
   &:hover {
-    transform: scale(1.25);
+    height: 25vh;
   }
 `
 const StyledProjectTitle = styled.h1`
