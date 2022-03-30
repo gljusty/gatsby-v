@@ -59,13 +59,13 @@ const ResumeDisplay = () => {
           Sep 2021 - Dec 2021
         </h3>
         <p>
-          
+
         </p>
         
       </StyledResumeSection>
       <StyledResumeSection className='_section'>
       <StyledResumeSectionTitle>
-          Education & Certifications
+          Education
       </StyledResumeSectionTitle>
         Test Section 3
       </StyledResumeSection>

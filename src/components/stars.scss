@@ -12,6 +12,9 @@
   @return $random_range;
 }
 
+$smallscr: 300px;
+$medscr: 900px;
+
 
 $shadows-small:  multiple-box-shadow(1000);
 $shadows-medium: multiple-box-shadow(300);
@@ -75,11 +78,14 @@ $shadows-big:    multiple-box-shadow(100);
 }
 
 .shooting_star {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
   $star-count: 5;
   --star-color: var(--primary-color);
-  --star-tail-length: 6em;
+  --star-tail-length: 6px;
   --star-tail-height: 2px;
-  --star-width: calc(var(--star-tail-length) / 6);
+  --star-width: calc(var(--star-tail-length) / 12);
   --fall-duration: 9s;
   --tail-fade-duration: calc(var(--fall-duration) / 2 * 3);
 
@@ -99,11 +105,11 @@ $shadows-big:    multiple-box-shadow(100);
   
   @for $i from 1 through $star-count {
     &:nth-child(#{$i}) {
-      --star-tail-length: #{calc(random_range(500em, 750em) / 100)};
+      --star-tail-length: #{calc(random_range(500em, 1000em) / 100)};
       --top-offset: #{calc(random_range(500vh, 3000vh) / 100)};
       --left-offset: #{calc(random_range(2000vw, 10000vw) / 100)};
       --fall-duration: #{calc(random_range(6000, 12000s) / 1000)};
-      --fall-delay: #{calc(random_range(0, 20000s) / 1000)};
+      --fall-delay: #{calc(random_range(5000, 20000s) / 1000)};
     }
   }
 }
@@ -150,13 +156,3 @@ $shadows-big:    multiple-box-shadow(100);
     transform: translateZ(-2000px);
   }
 }
-
-@keyframes animStar1 {
-    0% {	 
-      transform: translateZ(0px);
-      opacity: 100%;
-    } 50% {	
-      transform: translateZ(-200px);
-      opacity: 75%;
-    }
-  }

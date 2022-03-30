@@ -98,8 +98,11 @@ white-space: nowrap;
 `
 
 const StyledProjectList = styled.div`
+@media (max-width: 768px) {
+  margin: 20vh 0 0 5vh;
+}
 position: relative;
-margin: 20vh 0 0 5vh;
+margin: 20vh 0 0 10vw;
 overflow: scroll;
 border-radius: 8px;
 scrollbar-width: none;
@@ -118,7 +121,7 @@ scrollbar-width: none;
 display: block;
 overflow: scroll;
 white-space: wrap;
-text-align: justified;
+text-align: center;
 height: 10vh;
 min-height: 5vh;
 flex-direction: vertical;
@@ -131,7 +134,7 @@ border-radius: 8px;
 color: white;
 transition: all 100ms linear;  
   &:hover {
-    height: 25vh;
+    height: 27.5vh;
   }
 `
 const StyledProjectTitle = styled.h1`
@@ -155,7 +158,7 @@ color: white;
 text-decoration: none;
 float: right;
 top: 0;
-margin-right: 1.8em;
+margin-right: 0.4vw;
 transition: background-color linear 250ms;
   &:hover {
     background-color: lightblue;
