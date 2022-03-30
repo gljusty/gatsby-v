@@ -4,13 +4,12 @@ html {
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   scrollbar-width: none;
-  background: radial-gradient(ellipse at bottom, rgba(73, 101, 134, 1) 1vh, rgb(1,1,1));
-  background-size: cover;
 }
 ::-webkit-scrollbar {
   display: none;
 }
 body {
+  background: radial-gradient(ellipse at bottom, rgba(73, 101, 134, 1) 1vh, rgb(1,1,1));
   overflow: hidden;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -26,9 +25,12 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
+.app {
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
-    background-color: complement($color: #000000);
   }
 }

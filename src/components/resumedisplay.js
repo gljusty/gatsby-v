@@ -34,6 +34,7 @@ background-color: rgba(1,1,1,0.75);
 }
 `
 
+
 const ResumeDisplay = () => {
   React.useEffect(() => {
 
@@ -52,17 +53,15 @@ const ResumeDisplay = () => {
       </StyledResumeSectionTitle>
         Test Section 2. Test paragraph of content. Test sentence of content. Test sentence number 4. 10239  ` ` special characters $$#24**7468&&
         <h1>
-          Test inner content. Separated by anonymous element.
-        </h1>Test Section 2
-        Test Section 2
-        Test Section 2
-        Test Section 2
-        Test Section 2
-        Test Section 2
-        Test Section 2
-        Test Section 2
-        Test Section 2
-        Test Section 2
+          IT Support Specialist | Technology Helpers
+        </h1>
+        <h3>
+          Sep 2021 - Dec 2021
+        </h3>
+        <p>
+          
+        </p>
+        
       </StyledResumeSection>
       <StyledResumeSection className='_section'>
       <StyledResumeSectionTitle>
