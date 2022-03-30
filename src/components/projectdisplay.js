@@ -93,7 +93,7 @@ padding-left: 2px;
 padding-right: 2px;
 width: fit-content;
 border-radius: 8px;
-background-color: slategrey;
+background: linear-gradient(200deg, slategrey, #1b3445);
 white-space: nowrap;
 `
 
@@ -132,7 +132,7 @@ padding: 1vh 1vw;
 background: linear-gradient(33deg, rgba(0,0,0,0.5), #1b3445);
 border-radius: 8px;
 color: white;
-transition: all 100ms linear;  
+transition: all 250ms linear;  
   &:hover {
     height: 27.5vh;
   }
@@ -147,7 +147,7 @@ whitespace: nowrap;
 `
 
 const StyledGitHubLink = styled.a`
-background-color: slategrey;
+background: linear-gradient(200deg, slategrey, #1b3445);
 padding: 0.1vw 0.25vw;
 border-radius: 8px;
 display: flex;
@@ -159,9 +159,11 @@ text-decoration: none;
 float: right;
 top: 0;
 margin-right: 0.4vw;
-transition: background-color linear 250ms;
+border: 1px solid transparent;
+box-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+transition: all linear 250ms;
   &:hover {
-    background-color: lightblue;
+    border: 1px solid whitesmoke;
   }
 `
 

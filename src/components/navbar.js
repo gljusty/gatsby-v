@@ -8,8 +8,8 @@ font-family: 'Courier';
 position: sticky;
 display: flex;
 float: right;
-top: 10%;
-margin-right: 12%;
+top: 10vh;
+margin-right: 10vw;
 justify-content: space-between;
 `
 
