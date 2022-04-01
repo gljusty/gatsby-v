@@ -54,7 +54,7 @@ const StyledResumeContent = styled.section`
 
 const StyledSkillBadge = styled.div`
   border-radius: 8px;
-  background: linear-gradient(200deg, slategrey, #1b3445);
+  background: radial-gradient(ellipse at bottom, slategrey, #1b3445);
   font-family: "Courier";
   text-align: center;
   padding: 1vh 1vw;
@@ -92,15 +92,15 @@ const ResumeDisplay = () => {
       <StyledResumeSection className="_section">
         <StyledResumeSectionTitle>Experience</StyledResumeSectionTitle>
         <StyledResumeContent>
-          <h2>Self-Employed | _Flax & Jottr</h2>
+          <h2>Self-Employed @ _Flax & Jottr</h2>
           <StyledTimeStamp>Dec 2020 - Current</StyledTimeStamp>
         </StyledResumeContent>
         <StyledResumeContent>
-          <h2>IT Generalist | Technology Helpers</h2>
+          <h2>IT Generalist @ Technology Helpers</h2>
           <h6>Sep 2021 - Dec 2021</h6>
         </StyledResumeContent>
         <StyledResumeContent>
-          <h2>Founder | 303 CBD</h2>
+          <h2>Founder @ 303 CBD</h2>
           <h6>Sep 2017 - Mar 2020</h6>
         </StyledResumeContent>
       </StyledResumeSection>
