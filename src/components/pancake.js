@@ -73,7 +73,7 @@ const PancakeComponent = () => {
       <StyledBackEndIconContainer className="_beContainer">
         <StyledStackIcon>
           <StaticImage
-            src="../assets/Python_logo.png"
+            src="../assets/python_logo.png"
             alt=""
             placeholder="tracedSVG"
             className="_python"
