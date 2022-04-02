@@ -78,7 +78,7 @@ $shadows-big:    multiple-box-shadow(100);
 }
 
 .shooting_star {
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     display: none;
   }
   $star-count: 5;
