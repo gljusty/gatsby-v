@@ -1,6 +1,7 @@
 import * as React from "react"
 import styled from "styled-components"
 import LeaderLine from "leader-line-new"
+import { FaCheck } from "@react-icons/all-files/fa/FaCheck"
 
 const StyledResumeContainer = styled.div`
   @media (max-width: 300px) {
@@ -65,8 +66,23 @@ const StyledSkillBadge = styled.div`
 `
 
 const StyledTimeStamp = styled.h6`
-  margin-top: 100px;
+  margin-top: -2vh;
   text-align: center;
+`
+
+const StyledResumeList = styled.ul`
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+  }
+  margin: 1vh 10vw;
+  text-align: justify;
+`
+
+const StyledProjectLink = styled.a`
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  color: coral;
 `
 
 class ResumeDisplay extends React.Component {
@@ -139,54 +155,143 @@ class ResumeDisplay extends React.Component {
             <StyledResumeContent>
               <h2>Self-Employed @ Flax & Jottr</h2>
               <StyledTimeStamp>Dec 2020 - Current</StyledTimeStamp>
+              <StyledResumeList>
+                <StyledProjectLink
+                  href="https://www.github.com/gljusty/flax"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Flax
+                </StyledProjectLink>
+                <li>Developed a full-stack web application named _Flax.</li>
+                <li>
+                  Built on a Flask back end with a Vue front end, Flax allows
+                  users to anonymously retrieve twitter data and analyze tweet
+                  sentiment using NTLK3's VADER to be downloaded and/or fed into
+                  an ETL pipeline.
+                </li>
+                <li>
+                  Database in PostgreSQL with ORM handled by SQLAlchemy and
+                  Marshmallow.
+                </li>
+                <li>
+                  Deployed on Heroku at{" "}
+                  <a
+                    style={{ textDecoration: `none`, color: `aquamarine` }}
+                    href="https://flax-app.herokuapp.com/app"
+                  >
+                    https://flax-app.herokuapp.com/app
+                  </a>
+                </li>
+                <StyledProjectLink
+                  href="https://www.github.com/gljusty/jottr"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Jottr
+                </StyledProjectLink>
+                <li>Chrome/Firefox addon written in Vanilla Javascript.</li>
+                <li>
+                  Facilitates smooth workflows by providing autosave
+                  functionality while living in the User's toolbar, reducing the
+                  need for anyone who frequently works in the browser to alt tab
+                  between sources of information.
+                </li>
+              </StyledResumeList>
             </StyledResumeContent>
             <StyledResumeContent>
               <h2>IT Generalist @ Technology Helpers</h2>
-              <h6>Sep 2021 - Dec 2021</h6>
+              <StyledTimeStamp>Sep 2021 - Dec 2021</StyledTimeStamp>
+              <StyledResumeList>
+                <li>
+                  Supported 700+ configurations spanning 500+ end users across
+                  16 clients alongside a small team of techs using the
+                  ConnectWise platform.
+                </li>
+                <li>
+                  Interfaced regularly with users to troubleshoot tech-related
+                  problems including cloud administration, Office 365, AD,
+                  deploying machines and basic networking problems such as DNS
+                  issues.
+                </li>
+                <li>
+                  Assisted in implementing standardization across internal
+                  documentation, improving accessibility of information and
+                  streamlining workflow.
+                </li>
+              </StyledResumeList>
             </StyledResumeContent>
             <StyledResumeContent>
               <h2>Founder @ 303 CBD</h2>
-              <h6>Sep 2017 - Mar 2020</h6>
+              <StyledTimeStamp>Sep 2017 - Mar 2020</StyledTimeStamp>
+              <StyledResumeList>
+                <li>
+                  Designed and built manufacturing equipment for processing
+                  small batches of raw CBD in the capacity of 1kg/day.
+                </li>
+                <li>
+                  Manufactured and distributed several CBD products in Colorado
+                  and Texas under a wholly owned brand, "Exhempt".
+                </li>
+                <li>
+                  Developed branding, web presence via custom ecommerce site and
+                  implemented KPI tracking to improve bounce rate on company
+                  website by 50% over 2-year period.
+                </li>
+                <li>
+                  Fostered strong relationships with suppliers and customers in
+                  both B2B and B2C capacities and engaged in some light
+                  consulting to other firms in the hemp industry, primarily in
+                  the realm of manufacturing.
+                </li>
+              </StyledResumeList>
             </StyledResumeContent>
           </StyledResumeSection>
           <StyledResumeSection className="_section">
             <StyledResumeSectionTitle>Education</StyledResumeSectionTitle>
             <StyledResumeContent>
               <h4>Chemistry | University of Colorado Boulder</h4>
-              <h4>IT Support Professional Certificate | Google</h4>
-              <h6>
-                <a
-                  href="https://www.credly.com/badges/4cf00abb-4c9b-4ecc-845a-f2515b097e0c/public_url"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Verification
-                </a>
-              </h6>
               <h4>
-                IT Automation with Python Professional Certificate | Google
+                IT Support Professional Certificate | Google{" "}
+                <span>
+                  <a
+                    href="https://www.credly.com/badges/4cf00abb-4c9b-4ecc-845a-f2515b097e0c/public_url"
+                    target="_blank"
+                    title="test"
+                    rel="noreferrer"
+                    style={{ color: `aquamarine` }}
+                  >
+                    <FaCheck />
+                  </a>
+                </span>
               </h4>
-              <h6>
-                <a
-                  href="https://www.credly.com/badges/eaa1d0f9-eacd-440d-ac2e-b532d66aa39f/public_url"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Verification
-                </a>
-              </h6>
               <h4>
-                Python 3 Specialization Certificate | University of Michigan
+                IT Automation with Python Professional Certificate | Google{" "}
+                <span>
+                  <a
+                    href="https://www.credly.com/badges/eaa1d0f9-eacd-440d-ac2e-b532d66aa39f/public_url"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ color: `aquamarine` }}
+                  >
+                    <FaCheck />
+                  </a>
+                </span>
               </h4>
-              <h6>
-                <a
-                  href="https://coursera.org/share/b0c48ecb2c0378a3c8dbfb69c25907c7"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Verification
-                </a>
-              </h6>
+              <h4>
+                Python 3 Specialization Certificate | University of Michigan{" "}
+                <span>
+                  <a
+                    href="https://coursera.org/share/b0c48ecb2c0378a3c8dbfb69c25907c7"
+                    target="_blank"
+                    title="test"
+                    rel="noreferrer"
+                    style={{ color: `aquamarine` }}
+                  >
+                    <FaCheck />
+                  </a>
+                </span>
+              </h4>
             </StyledResumeContent>
           </StyledResumeSection>
         </StyledResumeContainer>

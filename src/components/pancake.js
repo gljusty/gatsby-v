@@ -17,7 +17,7 @@ const StyledStackIcon = styled.div`
 
 const StyledFrontEndIconContainer = styled.div`
   display: flex;
-  margin-top: 5vh;
+  margin-top: 3vh;
   width: 10vw;
   min-width: 100px;
 `
@@ -58,6 +58,7 @@ const PancakeComponent = () => {
             alt=""
             placeholder="tracedSVG"
             className="_vue"
+            style={{ margin: `0 1vw 0 0` }}
           />
         </StyledStackIcon>
         <StyledStackIcon>
