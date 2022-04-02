@@ -12,12 +12,14 @@ const StyledPancakeContainer = styled.div`
 
 const StyledStackIcon = styled.div`
   background-color: transparent;
+  min-width: 20px;
 `
 
 const StyledFrontEndIconContainer = styled.div`
   display: flex;
   margin-top: 5vh;
   width: 10vw;
+  min-width: 100px;
 `
 
 const StyledBackEndIconContainer = styled.div`
@@ -29,6 +31,7 @@ const StyledBackEndIconContainer = styled.div`
   margin-top: 5vh;
   width: 10vw;
   height: 20vh;
+  min-width: 100px;
 `
 
 const PancakeComponent = () => {
@@ -39,13 +42,14 @@ const PancakeComponent = () => {
         alt=""
         placeholder="tracedSVG"
       />
-      <StyledFrontEndIconContainer>
+      <StyledFrontEndIconContainer className="_feContainer">
         <StyledStackIcon>
           <StaticImage
             src="../assets/React_logo.png"
             alt=""
             placeholder="tracedSVG"
             className="_react"
+            style={{ margin: `1vh 0 0 0` }}
           />
         </StyledStackIcon>
         <StyledStackIcon>
@@ -66,7 +70,7 @@ const PancakeComponent = () => {
           />
         </StyledStackIcon>
       </StyledFrontEndIconContainer>
-      <StyledBackEndIconContainer>
+      <StyledBackEndIconContainer className="_beContainer">
         <StyledStackIcon>
           <StaticImage
             src="../assets/Python_logo.png"
@@ -82,7 +86,7 @@ const PancakeComponent = () => {
             alt=""
             placeholder="tracedSVG"
             className="_postgres"
-            style={{ width: `3vw`, margin: `0.5vh 0 0 -4.2vw` }}
+            style={{ width: `3vw`, margin: `1vh 0 0 1vw` }}
           />
         </StyledStackIcon>
         <StyledStackIcon>

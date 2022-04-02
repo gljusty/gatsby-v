@@ -83,7 +83,7 @@ class ResumeDisplay extends React.Component {
       setTimeout(() => {
         try {
           const start = document.querySelector("._pancake")
-          const end = document.querySelector("._flask")
+          const end = document.querySelector("._beContainer")
           const line = new LeaderLine(start, end, {
             hide: true,
             color: `aquamarine`,
