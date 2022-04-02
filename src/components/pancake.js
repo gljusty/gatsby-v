@@ -77,7 +77,6 @@ const PancakeComponent = () => {
             alt=""
             placeholder="tracedSVG"
             className="_python"
-            style={{ width: `5vw` }}
           />
         </StyledStackIcon>
         <StyledStackIcon>
