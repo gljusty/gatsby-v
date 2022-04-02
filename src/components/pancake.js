@@ -26,7 +26,7 @@ const StyledBackEndIconContainer = styled.div`
     "a b b"
     "c c c";
   align-content: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
   width: 10vw;
   height: 20vh;
 `
@@ -62,6 +62,7 @@ const PancakeComponent = () => {
             alt=""
             placeholder="tracedSVG"
             className="_bootstrap"
+            style={{ width: `3vw`, margin: `5vh 0 0 -2vw` }}
           />
         </StyledStackIcon>
       </StyledFrontEndIconContainer>
@@ -91,7 +92,7 @@ const PancakeComponent = () => {
             className="_marshmallow"
             placeholder="tracedSVG"
             style={{ width: `3vw`, margin: `5vh 0 0 -2vw` }}
-            imgStyle={{ filter: `invert(100%)` }}
+            imgStyle={{ filter: `invert(100%) hue-rotate(90deg)` }}
           />
         </StyledStackIcon>
         <StyledStackIcon>
