@@ -67,6 +67,16 @@ const Header = () => {
       },
       false
     )
+    m.addEventListener(
+      "animationend",
+      () => {
+        setTimeout(() => {
+          m.classList.remove("animate__fadeInUp", "animate__faster")
+          m.classList.add("animate__animated", "animate__flash")
+        }, 1000)
+      },
+      false
+    )
   })
   return (
     <>

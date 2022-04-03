@@ -73,7 +73,7 @@ const PancakeComponent = () => {
             style={{
               width: `3vw`,
               margin: `5vh 0 0 -3vw`,
-              minWidth: `30px`,
+              minWidth: `20px`,
             }}
           />
         </StyledStackIcon>
