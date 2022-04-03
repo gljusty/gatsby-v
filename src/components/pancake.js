@@ -105,16 +105,6 @@ const PancakeComponent = () => {
         </StyledStackIcon>
         <StyledStackIcon>
           <StaticImage
-            src="../assets/flask-sqlalchemy_logo.png"
-            alt=""
-            className="_flasksqlalchemy animate__animated animate__fadeInUpBig animate__slow"
-            placeholder="tracedSVG"
-            style={{ width: `4vw`, margin: `-1.5vh auto`, minWidth: `30px` }}
-            imgStyle={{ filter: `invert(100%) hue-rotate(90deg)` }}
-          />
-        </StyledStackIcon>
-        <StyledStackIcon>
-          <StaticImage
             src="../assets/Flask_logo.png"
             alt=""
             placeholder="tracedSVG"
