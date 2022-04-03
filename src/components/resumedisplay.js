@@ -51,7 +51,7 @@ const StyledResumeSection = styled.section`
 `
 
 const StyledResumeContent = styled.section`
-  white-space: pre-wrap;
+  white-space: wrap;
 `
 
 const StyledSkillBadge = styled.div`
@@ -200,7 +200,7 @@ class ResumeDisplay extends React.Component {
               </StyledResumeList>
             </StyledResumeContent>
             <StyledResumeContent>
-              <h2>IT Generalist @ Technology Helpers</h2>
+              <h2>IT Generalist @ Tech Helpers</h2>
               <StyledTimeStamp>Sep 2021 - Dec 2021</StyledTimeStamp>
               <StyledResumeList>
                 <li>
