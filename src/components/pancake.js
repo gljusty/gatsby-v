@@ -40,10 +40,11 @@ const PancakeComponent = () => {
   return (
     <StyledPancakeContainer>
       <StaticImage
-        className="_pancake animate__animated animate__fadeIn animate__slow"
+        className="_pancake animate__animated animate__slow"
         src="../assets/clipart1195004.png"
         alt=""
         placeholder="tracedSVG"
+        loading="lazy"
       />
       <StyledFrontEndIconContainer className="_feContainer">
         <StyledStackIcon>

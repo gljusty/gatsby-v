@@ -72,7 +72,7 @@ const Header = () => {
       () => {
         setTimeout(() => {
           m.classList.remove("animate__fadeInUp", "animate__faster")
-          m.classList.add("animate__animated", "animate__flash")
+          m.classList.add("animate__animated", "animate__bounce")
         }, 1000)
       },
       false

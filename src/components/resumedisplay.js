@@ -136,7 +136,7 @@ class ResumeDisplay extends React.Component {
         } catch {
           //dont do anything
         }
-      }, 1000)
+      }, 2500)
     }
     this.setState({ initial: false })
   }
