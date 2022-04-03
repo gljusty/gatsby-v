@@ -1,5 +1,4 @@
 import * as React from "react"
-import ContactMeComponent from "../components/contactme"
 import Header from "../components/header"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
