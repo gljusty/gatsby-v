@@ -69,7 +69,7 @@ const PancakeComponent = () => {
             alt=""
             placeholder="tracedSVG"
             className="_bootstrap"
-            style={{ width: `3vw`, margin: `5vh 0 0 -2vw` }}
+            style={{ width: `3vw`, margin: `5vh 0 0 -2vw`, minWidth: `40px` }}
           />
         </StyledStackIcon>
       </StyledFrontEndIconContainer>
@@ -80,6 +80,7 @@ const PancakeComponent = () => {
             alt=""
             placeholder="tracedSVG"
             className="_python"
+            style={{ Width: `40px` }}
           />
         </StyledStackIcon>
         <StyledStackIcon>
@@ -88,7 +89,7 @@ const PancakeComponent = () => {
             alt=""
             placeholder="tracedSVG"
             className="_postgres"
-            style={{ width: `3vw`, margin: `1vh 0 0 1vw` }}
+            style={{ width: `3vw`, margin: `1vh 0 0 1vw`, minWidth: `30px` }}
           />
         </StyledStackIcon>
         <StyledStackIcon>
@@ -97,7 +98,7 @@ const PancakeComponent = () => {
             alt=""
             className="_marshmallow"
             placeholder="tracedSVG"
-            style={{ width: `3vw`, margin: `5vh 0 0 -2vw` }}
+            style={{ width: `3vw`, margin: `5vh 0 0 -2vw`, minWidth: `30px` }}
             imgStyle={{ filter: `invert(100%) hue-rotate(90deg)` }}
           />
         </StyledStackIcon>
@@ -106,7 +107,7 @@ const PancakeComponent = () => {
             src="../assets/Flask_logo.png"
             alt=""
             placeholder="tracedSVG"
-            style={{ width: `10vw` }}
+            style={{ width: `10vw`, minWidth: `60px` }}
             imgStyle={{ filter: `invert(90%)` }}
             className="_flask"
           />
