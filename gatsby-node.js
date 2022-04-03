@@ -1,12 +1,12 @@
-exports.createPages = async ({ actions }) => {
+/* exports.createPages = async ({ actions }) => {
   const { createPage } = actions
   createPage({
-    path: "/using-dsg",
+    path: "/resume",
     component: require.resolve("./src/templates/using-dsg.js"),
     context: {},
     defer: true,
   })
-}
+}  not needed for now -- keeping for future reference */
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html" || stage === "develop-html") {
