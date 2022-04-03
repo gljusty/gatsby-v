@@ -36,6 +36,10 @@ const NavBar = () => {
       <StyledNavLink as={Link} to="/resume" id="resume_link">
         Resume
       </StyledNavLink>
+      <span> | </span>
+      <StyledNavLink as="a" href="mailto:b@gljusty.dev" className="_email_link">
+        Email Me
+      </StyledNavLink>
     </StyledNav>
   )
 }

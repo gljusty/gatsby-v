@@ -1,10 +1,16 @@
 import * as React from "react"
 import styled from "styled-components"
+import LeaderLine from "leader-line-new"
 
 const StyledContactMe = styled.div`
+  @media only screen and (max-width: 768px) {
+    diplay: none;
+  }
   cursor: pointer;
   display: flex;
-  position: relative;
+  position: absolute;
+  top: 95vh;
+  left: 5vw;
   background: radial-gradient(ellipse at bottom, aquamarine, #1b3443);
   padding: 2vh 2vw;
   border-radius: 8px;
@@ -12,29 +18,60 @@ const StyledContactMe = styled.div`
   color: whitesmoke;
 `
 const StyledContactLink = styled.div`
-  opacity: 0;
-  color: whitesmoke;
+  opacity: 100%;
+  font-weight: bold;
+  color: black;
   transition: all 250ms linear;
   ${StyledContactMe}:hover & {
-    opacity: 100%;
+    color: whitesmoke;
   }
 `
 
 const testf = () => {
-  return console.log("testf")
+  const start = document.querySelector("._contact")
+  const end = document.querySelector("._email_link")
+  if (typeof window !== undefined) {
+    setTimeout(() => {
+      try {
+        const line = new LeaderLine(start, end, {
+          hide: true,
+          color: `aquamarine`,
+          startSocket: `top`,
+          endSocket: `bottom`,
+          path: `grid`,
+          startPlug: `behind`,
+          endPlug: `behind`,
+          startSocketGravity: 0,
+          endSocketGravity: 40,
+        })
+        const eline = document.querySelector(".leader-line:last-of-type")
+        eline.style.zIndex = -1
+        line.show("draw")
+
+        setTimeout(() => {
+          try {
+            eline.remove()
+            window.open("mailto:b@gljusty.dev", "_blank")
+          } catch {
+            // do nothing
+          }
+        }, 1000)
+      } catch {
+        //do nothing
+      }
+    }, 250)
+  }
 }
 
 const ContactMeComponent = () => {
   return (
-    <div style={{ position: `absolute`, top: `55vh`, left: `5vw` }}>
-      <StyledContactMe
-        className="_contact animate__animated animate__fadeInUp"
-        onClick={testf}
-        cursor="pointer"
-      >
-        <StyledContactLink className="_test">Contact Me</StyledContactLink>
-      </StyledContactMe>
-    </div>
+    <StyledContactMe
+      className="_contact animate__animated animate__fadeInUp"
+      onClick={testf}
+      cursor="pointer"
+    >
+      <StyledContactLink className="_contact">Contact Me</StyledContactLink>
+    </StyledContactMe>
   )
 }
 

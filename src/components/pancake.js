@@ -4,8 +4,10 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const StyledPancakeContainer = styled.div`
   position: absolute;
-  height: 200px;
-  width: 200px;
+  height: 10vh;
+  width: 10vw;
+  min-height: 100px;
+  min-width: 100px;
   top: 25vh;
   left: 75vw;
 `

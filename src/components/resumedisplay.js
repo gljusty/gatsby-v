@@ -21,7 +21,7 @@ const StyledResumeContainer = styled.div`
   grid-template-columns: auto;
   grid-auto-flow: dense;
   min-height: 50vh;
-  min-width: 265px;
+  min-width: 300px;
   height: fit-content;
   width: fit-content;
   max-height: 100vh;
