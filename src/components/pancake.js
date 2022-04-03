@@ -115,7 +115,7 @@ const PancakeComponent = () => {
             style={{
               width: `3vw`,
               height: `fit-content`,
-              minWidth: `40px`,
+              minWidth: `25px`,
               margin: `0 0 0 0`,
             }}
             className="_nodejs animate__animated animate__fadeInDownBig animate__fast"
