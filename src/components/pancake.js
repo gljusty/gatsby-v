@@ -60,7 +60,7 @@ const PancakeComponent = () => {
             src="../assets/Vue_logo.png"
             alt=""
             placeholder="tracedSVG"
-            className="_vue animate__animated animate__fadeInRightBig animate__slower"
+            className="_vue animate__animated animate__fadeInRightBig"
             style={{ margin: `0 1vw 0 0` }}
           />
         </StyledStackIcon>
@@ -94,7 +94,7 @@ const PancakeComponent = () => {
             alt=""
             placeholder="tracedSVG"
             className="_postgres animate__animated animate__fadeInRightBig"
-            style={{ width: `3vw`, margin: `1vh 5px 0 0`, minWidth: `30px` }}
+            style={{ width: `3vw`, margin: `0 0 0 0`, minWidth: `30px` }}
           />
         </StyledStackIcon>
         <StyledStackIcon>
@@ -109,6 +109,20 @@ const PancakeComponent = () => {
         </StyledStackIcon>
         <StyledStackIcon>
           <StaticImage
+            src="../assets/nodejs-icon.svg"
+            alt=""
+            placeholder="tracedSVG"
+            style={{
+              width: `3vw`,
+              height: `fit-content`,
+              minWidth: `40px`,
+              margin: `0 0 0 0`,
+            }}
+            className="_nodejs animate__animated animate__fadeInDownBig animate__fast"
+          />
+        </StyledStackIcon>
+        <StyledStackIcon>
+          <StaticImage
             src="../assets/flask_icon_svg.svg"
             alt=""
             placeholder="tracedSVG"
@@ -116,7 +130,7 @@ const PancakeComponent = () => {
               width: `3vw`,
               height: `fit-content`,
               minWidth: `60px`,
-              margin: `0 0 0 4vw`,
+              margin: `0 0 0 0`,
             }}
             imgStyle={{ filter: `invert(100%)` }}
             className="_flask animate__animated animate__fadeInUpBig animate__fast"
