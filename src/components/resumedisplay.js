@@ -94,8 +94,8 @@ class ResumeDisplay extends React.Component {
     }
   }
 
-  componentDidMount() {
-    if (this.state.initial === true) {
+  DrawLines = async () => {
+    if (this.state.initial === true && typeof window !== "undefined") {
       setTimeout(() => {
         try {
           const start = document.querySelector("._pancake")
@@ -121,6 +121,10 @@ class ResumeDisplay extends React.Component {
       }, 1000)
     }
     this.setState({ initial: false })
+  }
+
+  componentDidMount() {
+    this.DrawLines()
   }
 
   componentWillUnmount() {
