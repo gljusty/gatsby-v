@@ -38,8 +38,9 @@ const StyledBackEndIconContainer = styled.div`
 
 const PancakeComponent = () => {
   return (
-    <StyledPancakeContainer className="_pancake animate__animated animate__zoomInDown">
+    <StyledPancakeContainer>
       <StaticImage
+        className="_pancake"
         src="../assets/clipart1195004.png"
         alt=""
         placeholder="tracedSVG"
@@ -50,7 +51,7 @@ const PancakeComponent = () => {
             src="../assets/React_logo.png"
             alt=""
             placeholder="tracedSVG"
-            className="_react animate__animated animate__fadeInRightBig"
+            className="_react animate__animated animate__fadeInRightBig animate__slow"
             style={{ margin: `1vh 0 0 0` }}
           />
         </StyledStackIcon>
@@ -59,7 +60,7 @@ const PancakeComponent = () => {
             src="../assets/Vue_logo.png"
             alt=""
             placeholder="tracedSVG"
-            className="_vue animate__animated animate__fadeInRightBig"
+            className="_vue animate__animated animate__fadeInRightBig animate__slower"
             style={{ margin: `0 1vw 0 0` }}
           />
         </StyledStackIcon>
@@ -68,7 +69,7 @@ const PancakeComponent = () => {
             src="../assets/Bootstrap_logo.png"
             alt=""
             placeholder="tracedSVG"
-            className="_bootstrap animate__animated animate__fadeInRightBig"
+            className="_bootstrap animate__animated animate__fadeInRightBig animate__fast"
             style={{ width: `3vw`, margin: `5vh 0 0 -2vw`, minWidth: `30px` }}
           />
         </StyledStackIcon>
@@ -79,7 +80,7 @@ const PancakeComponent = () => {
             src="../assets/python_logo.png"
             alt=""
             placeholder="tracedSVG"
-            className="_python animate__animated animate__fadeInRightBig"
+            className="_python animate__animated animate__fadeInUpBig"
             style={{ Width: `40px` }}
           />
         </StyledStackIcon>
@@ -96,9 +97,19 @@ const PancakeComponent = () => {
           <StaticImage
             src="../assets/marshmallow_icon.png"
             alt=""
-            className="_marshmallow animate__animated animate__fadeInRightBig"
+            className="_marshmallow animate__animated animate__fadeInUpBig animate__slow"
             placeholder="tracedSVG"
             style={{ width: `3vw`, margin: `5vh 0 0 -2vw`, minWidth: `30px` }}
+            imgStyle={{ filter: `invert(100%) hue-rotate(90deg)` }}
+          />
+        </StyledStackIcon>
+        <StyledStackIcon>
+          <StaticImage
+            src="../assets/flask-sqlalchemy_logo.png"
+            alt=""
+            className="_flasksqlalchemy animate__animated animate__fadeInUpBig animate__slow"
+            placeholder="tracedSVG"
+            style={{ width: `4vw`, margin: `-1.5vh auto`, minWidth: `30px` }}
             imgStyle={{ filter: `invert(100%) hue-rotate(90deg)` }}
           />
         </StyledStackIcon>
@@ -109,7 +120,7 @@ const PancakeComponent = () => {
             placeholder="tracedSVG"
             style={{ width: `10vw`, minWidth: `60px` }}
             imgStyle={{ filter: `invert(90%)` }}
-            className="_flask animate__animated animate__fadeInRightBig"
+            className="_flask animate__animated animate__fadeInUpBig animate__fast"
           />
         </StyledStackIcon>
       </StyledBackEndIconContainer>

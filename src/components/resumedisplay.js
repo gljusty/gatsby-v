@@ -107,7 +107,7 @@ class ResumeDisplay extends React.Component {
             endSocket: `bottom`,
             path: `grid`,
             startPlug: `behind`,
-            endPlug: `behind`,
+            endPlug: `arrow2`,
             startSocketGravity: 25,
             endSocketGravity: 25,
           })

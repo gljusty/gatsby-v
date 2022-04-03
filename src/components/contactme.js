@@ -40,7 +40,7 @@ const testf = () => {
           endSocket: `bottom`,
           path: `grid`,
           startPlug: `behind`,
-          endPlug: `behind`,
+          endPlug: `arrow2`,
           startSocketGravity: 0,
           endSocketGravity: 40,
         })
@@ -59,7 +59,7 @@ const testf = () => {
       } catch {
         //do nothing
       }
-    }, 250)
+    }, 100)
   }
 }
 
