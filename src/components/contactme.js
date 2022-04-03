@@ -5,8 +5,7 @@ const StyledContactMe = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-  cursor: pointer;
-  display: flex;
+  display: block;
   position: fixed;
   top: 97.5vh;
   left: 0vw;
@@ -23,8 +22,10 @@ const StyledContactLink = styled.a`
   text-decoration: none;
   color: aquamarine;
   transition: all 250ms linear;
+  z-index: -2;
   &:hover {
     color: whitesmoke;
+    z-index: 2;
   }
 `
 

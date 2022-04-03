@@ -53,23 +53,6 @@ const StyledH1 = styled.h1`
 const Header = () => {
   React.useEffect(() => {
     const m = document.querySelectorAll("._message")[0]
-    const messages = Array.from(document.querySelectorAll("._hello"))
-    const message = messages.slice(-1)[0]
-    message.addEventListener(
-      "animationend",
-      () => {
-        setTimeout(() => {
-          for (let i in messages) {
-            messages[i].classList.remove("animate__faster")
-            messages[i].classList.add(
-              "animate__fadeOutDownBig",
-              "animate__slow"
-            )
-          }
-        }, 2000)
-      },
-      false
-    )
     m.addEventListener(
       "animationend",
       () => {
