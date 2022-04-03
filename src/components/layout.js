@@ -4,7 +4,6 @@ import NavBar from "./navbar"
 import Stars from "./stars"
 import Mountains from "./mountains"
 import "./layout.scss"
-import ContactMeComponent from "./contactme"
 
 const Layout = ({ children }) => {
   return (
@@ -22,7 +21,6 @@ const Layout = ({ children }) => {
         <Stars />
         {children}
         <Mountains />
-        <ContactMeComponent />
       </main>
     </>
   )

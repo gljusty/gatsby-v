@@ -2,6 +2,11 @@ import * as React from "react"
 import styled from "styled-components"
 import LeaderLine from "leader-line-new"
 import { FaCheck } from "@react-icons/all-files/fa/FaCheck"
+import { FaVolleyballBall } from "@react-icons/all-files/fa/FaVolleyballBall"
+import { FaMountain } from "@react-icons/all-files/fa/FaMountain"
+import { FaWrench } from "@react-icons/all-files/fa/FaWrench"
+import { GiJeep } from "@react-icons/all-files/gi/GiJeep"
+import { GiCook } from "@react-icons/all-files/gi/GiCook"
 
 const StyledResumeContainer = styled.div`
   @media (max-width: 300px) {
@@ -43,15 +48,28 @@ const StyledResumeSection = styled.section`
   border-radius: 8px;
   text-align: center;
   min-width: 240px;
+  height: fit-content;
   transition: all 250ms linear;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), #1b3445);
   &:hover {
     background-color: rgba(1, 1, 1, 1);
+    height: fit-content;
+  }
+  &:first-of-type {
+    height: 8vh;
+  }
+  &:first-of-type:hover {
+    height: 25vh;
   }
 `
 
 const StyledResumeContent = styled.section`
   white-space: wrap;
+`
+
+const StyledBioSection = styled.section`
+  display: flex;
+  width: fit-content;
 `
 
 const StyledSkillBadge = styled.div`
@@ -140,6 +158,30 @@ class ResumeDisplay extends React.Component {
         <StyledResumeContainer className="animate__animated animate__fadeInDownBig">
           <StyledResumeSection className="_section _bio">
             <StyledResumeSectionTitle>Bio</StyledResumeSectionTitle>
+            <StyledResumeContent>
+              <div>Bryan Stapleton</div>
+              <div>Boulder, CO 80302</div>
+              <div>
+                <a
+                  style={{ color: `aquamarine`, textDecoration: `none` }}
+                  href="mailto:b@gljusty.dev"
+                >
+                  b@gljusty.dev
+                </a>
+              </div>
+              <p>
+                Hobbies:
+                <section>
+                  <GiCook />
+                  <FaVolleyballBall />
+                  <FaMountain />
+                  <GiJeep />
+                  <FaWrench />
+                </section>
+              </p>
+            </StyledResumeContent>
+            <StyledBioSection></StyledBioSection>
+            <StyledBioSection></StyledBioSection>
           </StyledResumeSection>
           <StyledResumeSection className="_section">
             <StyledResumeSectionTitle>Skills</StyledResumeSectionTitle>

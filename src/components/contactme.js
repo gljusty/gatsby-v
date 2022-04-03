@@ -3,13 +3,13 @@ import styled from "styled-components"
 import LeaderLine from "leader-line-new"
 
 const StyledContactMe = styled.div`
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     display: none;
   }
   cursor: pointer;
   display: flex;
   position: fixed;
-  top: 95vh;
+  top: 80vh;
   left: 5vw;
   background: radial-gradient(ellipse at bottom, aquamarine, #1b3443);
   padding: 2vh 2vw;
