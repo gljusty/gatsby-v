@@ -61,7 +61,10 @@ const Header = () => {
         setTimeout(() => {
           for (let i in messages) {
             messages[i].classList.remove("animate__faster")
-            messages[i].classList.add("animate__fadeOutDown")
+            messages[i].classList.add(
+              "animate__fadeOutDownBig",
+              "animate__slow"
+            )
           }
         }, 2000)
       },
@@ -101,7 +104,7 @@ const Header = () => {
           <div
             style={{ margin: `1vw` }}
             id="bryan"
-            className="_hello animate__animated animate__fadeInDown animate__slower"
+            className="_hello animate__animated animate__flipInX animate__slower"
           >
             {" "}
             Bryan{" "}

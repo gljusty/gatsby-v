@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import NavBar from "./navbar"
 import Stars from "./stars"
 import Mountains from "./mountains"
+import ContactMeComponent from "./contactme"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
@@ -21,6 +22,7 @@ const Layout = ({ children }) => {
         <Stars />
         {children}
         <Mountains />
+        <ContactMeComponent />
       </main>
     </>
   )
