@@ -8,7 +8,7 @@ const StyledContactMe = styled.div`
   }
   cursor: pointer;
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 95vh;
   left: 5vw;
   background: radial-gradient(ellipse at bottom, aquamarine, #1b3443);
