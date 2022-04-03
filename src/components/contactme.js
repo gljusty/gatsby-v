@@ -3,11 +3,12 @@ import styled from "styled-components"
 
 const StyledContactMe = styled.div`
   @media only screen and (max-width: 768px) {
-    display: none;
+    top: 0vh;
+    padding: 0;
   }
   display: block;
   position: fixed;
-  top: 97.5vh;
+  top: 92.5vh;
   left: 0vw;
   background: transparent;
   border-radius: 8px;
@@ -19,6 +20,8 @@ const StyledContactLink = styled.a`
   opacity: 100%;
   font-family: "Courier";
   font-weight: bold;
+  font-size: 0.66em;
+  line-height: 0.66em;
   text-decoration: none;
   color: aquamarine;
   transition: all 250ms linear;
@@ -32,21 +35,25 @@ const StyledContactLink = styled.a`
 const ContactMeComponent = () => {
   return (
     <StyledContactMe className="_contact animate__animated animate__fadeInUp">
-      <StyledContactLink
-        className="_contact"
-        href="mailto:b@gljusty.dev"
-        target="_blank"
-      >
-        b@gljusty.dev
-      </StyledContactLink>
-      <span> | </span>
-      <StyledContactLink
-        className="_contact"
-        href="https://www.github.com/gljusty"
-        target="_blank"
-      >
-        github.com/gljusty
-      </StyledContactLink>
+      <div>
+        <StyledContactLink
+          className="_contact"
+          href="mailto:b@gljusty.dev"
+          target="_blank"
+        >
+          b@gljusty.dev
+        </StyledContactLink>
+      </div>
+
+      <div>
+        <StyledContactLink
+          className="_contact"
+          href="https://www.github.com/gljusty"
+          target="_blank"
+        >
+          github.com/gljusty
+        </StyledContactLink>
+      </div>
     </StyledContactMe>
   )
 }
