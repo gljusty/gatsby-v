@@ -7,7 +7,7 @@ const StyledPancakeContainer = styled.div`
   height: 10vh;
   width: 10vw;
   min-height: 100px;
-  min-width: 100px;
+  min-width: 80px;
   top: 25vh;
   left: 75vw;
 `
@@ -21,7 +21,7 @@ const StyledFrontEndIconContainer = styled.div`
   display: flex;
   margin-top: 3vh;
   width: 10vw;
-  min-width: 100px;
+  min-width: 80px;
 `
 
 const StyledBackEndIconContainer = styled.div`
@@ -33,7 +33,7 @@ const StyledBackEndIconContainer = styled.div`
   margin-top: 5vh;
   width: 10vw;
   height: 20vh;
-  min-width: 100px;
+  min-width: 80px;
 `
 
 const PancakeComponent = () => {
@@ -94,7 +94,7 @@ const PancakeComponent = () => {
             alt=""
             placeholder="tracedSVG"
             className="_postgres animate__animated animate__fadeInRightBig"
-            style={{ width: `3vw`, margin: `1vh 0 0 1vw`, minWidth: `30px` }}
+            style={{ width: `3vw`, margin: `1vh 5px 0 0`, minWidth: `30px` }}
           />
         </StyledStackIcon>
         <StyledStackIcon>

@@ -21,7 +21,7 @@ const StyledResumeContainer = styled.div`
   grid-template-columns: auto;
   grid-auto-flow: dense;
   min-height: 50vh;
-  min-width: 300px;
+  min-width: 260px;
   height: fit-content;
   width: fit-content;
   max-height: 100vh;
@@ -42,7 +42,7 @@ const StyledResumeSection = styled.section`
   scrollbar-width: none;
   border-radius: 8px;
   text-align: center;
-  min-width: 260px;
+  min-width: 240px;
   transition: all 250ms linear;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), #1b3445);
   &:hover {
