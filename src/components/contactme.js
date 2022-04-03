@@ -1,6 +1,5 @@
 import * as React from "react"
 import styled from "styled-components"
-import LeaderLine from "leader-line-new"
 
 const StyledContactMe = styled.div`
   @media only screen and (max-width: 768px) {
