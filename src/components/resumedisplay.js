@@ -142,7 +142,7 @@ class ResumeDisplay extends React.Component {
   }
 
   componentDidMount() {
-    this.DrawLines()
+    //this.DrawLines()
   }
 
   componentWillUnmount() {

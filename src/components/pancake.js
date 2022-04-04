@@ -39,13 +39,6 @@ const StyledBackEndIconContainer = styled.div`
 const PancakeComponent = () => {
   return (
     <StyledPancakeContainer>
-      <StaticImage
-        className="_pancake animate__animated animate__slow"
-        src="../assets/stack_logo.png"
-        alt=""
-        placeholder="tracedSVG"
-        imgStyle={{ filter: `invert(100%)` }}
-      />
       <StyledFrontEndIconContainer className="_feContainer">
         <StyledStackIcon>
           <StaticImage
