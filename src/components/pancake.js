@@ -44,7 +44,7 @@ const PancakeComponent = () => {
         src="../assets/stack_logo.png"
         alt=""
         placeholder="tracedSVG"
-        loading="lazy"
+        imgStyle={{ filter: `invert(100%)` }}
       />
       <StyledFrontEndIconContainer className="_feContainer">
         <StyledStackIcon>
