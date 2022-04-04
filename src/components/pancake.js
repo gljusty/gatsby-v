@@ -41,7 +41,7 @@ const PancakeComponent = () => {
     <StyledPancakeContainer>
       <StaticImage
         className="_pancake animate__animated animate__slow"
-        src="../assets/clipart1195004.png"
+        src="../assets/stack_logo.png"
         alt=""
         placeholder="tracedSVG"
         loading="lazy"
