@@ -14,7 +14,6 @@ const IndexPage = () => {
 
     const houses = Array.from(document.querySelectorAll(".house"))
     for (const house in houses) {
-      console.log(house)
       houses[house].classList.add("animate__animated", "animate__fadeInDownBig")
     }
     house_one.classList.add("animate__slow", "animate__lightSpeedInLeft")
