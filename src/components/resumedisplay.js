@@ -103,6 +103,44 @@ const StyledProjectLink = styled.a`
   color: coral;
 `
 
+const AltStyledMsg = styled.div`
+  @media only screen and (max-width: 768px) {
+    top: 17.5vh;
+    left: 25vw;
+  }
+  text-decoration: none;
+  overflow: hidden;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    63% 76%,
+    50% 100%,
+    35% 76%,
+    0% 75%
+  );
+  color: whitesmoke;
+  background-color: black;
+  position: absolute;
+  top: 80vh;
+  left: 63vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vw;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  min-width: fit-content;
+  width: fit-content;
+  height: 5vh;
+  font-family: "Courier";
+  text-align: center;
+  transition: background-color 250ms ease-in-out;
+  &:hover {
+    background-color: slategrey;
+  }
+`
+
 class ResumeDisplay extends React.Component {
   constructor(props) {
     super(props)
@@ -141,6 +179,11 @@ class ResumeDisplay extends React.Component {
     this.setState({ initial: false })
   }
 
+  CloseMsg = async () => {
+    let n = document.getElementById("pdf_message")
+    n.remove()
+  }
+
   componentDidMount() {
     //this.DrawLines()
   }
@@ -155,6 +198,38 @@ class ResumeDisplay extends React.Component {
   render() {
     return (
       <>
+        <AltStyledMsg
+          className="animate__animated animate__fadeInUp animate__delay-2s"
+          id="alt_pdf_message"
+        >
+          <a
+            href="./Simplified_Resume.pdf"
+            target="_blank"
+            style={{ color: `whitesmoke`, textDecoration: `none` }}
+          >
+            Need a PDF?
+          </a>
+        </AltStyledMsg>
+        {/* <StyledMsg
+          className="animate__animated animate__fadeInUp animate__delay-2s"
+          id="pdf_message"
+        >
+          <FaTimes
+            cursor="pointer"
+            onClick={this.CloseMsg}
+            style={{
+              marginTop: `-2vh`,
+              marginLeft: `-1vw`,
+            }}
+          />
+          <a
+            href="./Simplified_Resume.pdf"
+            target="_blank"
+            style={{ color: `whitesmoke`, textDecoration: `none` }}
+          >
+            Looking for a PDF?
+          </a>
+        </StyledMsg> */}
         <StyledResumeContainer className="animate__animated animate__fadeInDownBig">
           <StyledResumeSection className="_section _bio">
             <StyledResumeSectionTitle>Bio</StyledResumeSectionTitle>
