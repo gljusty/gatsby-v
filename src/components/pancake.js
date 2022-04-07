@@ -54,7 +54,7 @@ const PancakeComponent = () => {
             src="../assets/Vue_logo.png"
             alt=""
             placeholder="tracedSVG"
-            className="_vue animate__animated animate__fadeInDownBig animate__slow"
+            className="_vue animate__animated animate__fadeInDownBig"
             style={{ margin: `0 1vw 0 0` }}
           />
         </StyledStackIcon>
