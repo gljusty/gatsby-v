@@ -75,6 +75,12 @@ class ProjectDisplay extends React.Component {
               <StyledGitHubLink target="_blank" href={item.html_url}>
                 GitHub
               </StyledGitHubLink>
+              {item.homepage.length > 0 && (
+                <StyledGitHubLink target="_blank" href={item.homepage}>
+                  {" "}
+                  Demo{" "}
+                </StyledGitHubLink>
+              )}
               <StyledProjectTitle>
                 {item.full_name.replace("gljusty", "")}
               </StyledProjectTitle>
