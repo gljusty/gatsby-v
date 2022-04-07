@@ -267,7 +267,7 @@ class ResumeDisplay extends React.Component {
             <StyledSkillBadge> RESTful APIs </StyledSkillBadge>
             <StyledSkillBadge> Product Development </StyledSkillBadge>
             <StyledSkillBadge> Python </StyledSkillBadge>
-            <StyledSkillBadge> Javascript </StyledSkillBadge>
+            <StyledSkillBadge> JavaScript </StyledSkillBadge>
             <StyledSkillBadge> HTML/CSS </StyledSkillBadge>
             <StyledSkillBadge> NLP </StyledSkillBadge>
           </StyledResumeSection>
