@@ -67,11 +67,6 @@ const StyledResumeContent = styled.section`
   white-space: wrap;
 `
 
-const StyledBioSection = styled.section`
-  display: flex;
-  width: fit-content;
-`
-
 const StyledSkillBadge = styled.div`
   border-radius: 8px;
   background: radial-gradient(ellipse at bottom, slategrey, #1b3445);
@@ -255,8 +250,6 @@ class ResumeDisplay extends React.Component {
                 </section>
               </p>
             </StyledResumeContent>
-            <StyledBioSection></StyledBioSection>
-            <StyledBioSection></StyledBioSection>
           </StyledResumeSection>
           <StyledResumeSection className="_section">
             <StyledResumeSectionTitle>Skills</StyledResumeSectionTitle>

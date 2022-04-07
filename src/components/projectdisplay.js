@@ -127,7 +127,7 @@ const StyledTopicBadge = styled.div`
   padding-right: 2px;
   width: fit-content;
   border-radius: 8px;
-  background: radial-gradient(ellipse at bottom, slategrey, #1b3445);
+  background: rgba(25, 75, 220, 0.65);
   white-space: nowrap;
 `
 
